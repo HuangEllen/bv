@@ -1,0 +1,61 @@
+$bg-f:#6eb7bb;
+$tx-h:#ffffff;
+$tx-nev:#e6e6e6;
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 2rem 0;
+}
+
+section .section-title {
+    text-align: center;
+}
+#footer {
+    background: $bg-f !important;
+    h5{
+    margin-bottom: 10px;
+    color:$tx-h;
+    a {
+    text-decoration: none !important;
+
+}
+}
+}
+
+ul.quick-links li a{
+    color:$tx-nev;
+}
+ul.quick-links li a:hover{
+    color:$tx-h;
+}
+
+ul.quick-links li{
+    font-size:14px;
+}
+ul.quick-links li:hover{
+	font-weight:700;
+}
+ul.quick-links li a i{
+	margin-right: 5px;
+}
+// #footer ul.quick-links li:hover a i {
+//     font-weight: 700;
+// }
+ul.quick-links li{
+	padding: 3px 0;
+    // transition: .5s all ease;
+    font-size:14px;
+}
+.ellen-border-w{
+    border-top:1px solid $tx-nev;
+}
+.ellentop{
+    padding-top: 20px;
+}
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
