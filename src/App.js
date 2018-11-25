@@ -20,6 +20,7 @@ class App extends Component {
       <React.Fragment>
         
         <BrowserRouter>
+        
           <div className="App">
           <Nav />
             <Route exact path='/' component={Home}/>
