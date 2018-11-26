@@ -13,9 +13,9 @@ class college extends Component {
     }
     componentDidMount() {
         //ajax call
-        this.getUsers();
+        this.getClass();
     }
-    getUsers() {
+    getClass() {
         fetch("/allcroom/croom")  //http://localhost:3000/professor/api
             .then(res => res.json())
             .then(c_room => {

@@ -17,7 +17,7 @@ body{
 }
 @media (max-width: 991px) {
     body{
-        padding-top: 18.5rem;
+        padding-top: 16.5rem;
     }
 }
 h5{
@@ -120,8 +120,12 @@ input{
 header>ellen-herobox{
     position: relative;
 }
+.ellen-hero{
+    width: 100%;
+}
 .ellen-h75{
     height: 60px ;
+    
     overflow: hidden;
     text-overflow:ellipsis;
     display: -webkit-box;
@@ -523,3 +527,30 @@ header>ellen-herobox{
     font-weight: 600;
     color: #0062cc;
 }
+.qty-box {
+    border: 1px solid #94c4ec;
+    border-radius: 3px;
+    display: block;
+    height: 60px;
+    margin: calc(50vh - 30px) auto 0 auto;
+    width: 200px;
+  }
+  
+//   span {
+//     color: #62a8e2;
+//     font-family: sans-serif;
+//     float: left;
+//     line-height: 60px;
+//     text-align: center;
+//     width: calc(200px/3);
+//     -webkit-font-smoothing: antialiased;
+//}
+  
+  .dec,
+  .inc {
+    height: 100%;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
