@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 
-var a=1;
+var a = 1;
 class quantity extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         value: 1
-    //     }
-    //     this.onDecrement=this.onDecrement.bind(this);
-    //     this.onIncrement=this.onIncrement.bind(this);
-    // }
-// console.log(this.state);
-    // onDecrement=(a)=> {
-    //     console.log(this.state);
-    //     if (a <= 0) return;
-    //     this.setState({ value: a-1 });
-    //     console.log(this.state);
-    // }
-    // onIncrement() {
-    //     this.setState({ value: ++this.state.value });
-
-    // }
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: 1
+        }
+        //     this.onDecrement=this.onDecrement.bind(this);
+        //     this.onIncrement=this.onIncrement.bind(this);
+    }
+    // console.log(this.state);
+    onDecrement = () => this.setState({
+        value: this.state.value - 1
+        // console.log(this.state);
+        // if (a <= 0) return;
+        // this.setState({ value: a-1 });
+        // console.log(this.state);
+    })
+    onIncrement = () => this.setState({
+        value: this.state.value + 1
+    })
     // handleChange(evn) {
     //     this.setState({ value: evn.target.value });
     //     // console.log(this);
@@ -33,7 +33,7 @@ class quantity extends React.Component {
                     <div className="input-group-prepend">
                         <button className="btn bg-first btn-sm" onClick={this.onDecrement}><i className="fa fa-minus"></i></button>
                     </div>
-                    <input type="number" id="qty_input" className="form-control form-control-sm" value="1" min="1" />
+                    <input type="number" id="qty_input" className="form-control form-control-sm" value={this.state.value} />
                     <div className="input-group-prepend">
                         <button className="btn bg-first btn-sm" onClick={this.onIncrement}><i className="fa fa-plus"></i></button>
                     </div>
