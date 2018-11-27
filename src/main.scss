@@ -66,12 +66,12 @@ h2{
     border-right:1px solid #fff;
 }
 .navbar-dark .navbar-nav  {
-    color:$tx-nev !important;
+    // color:$tx-nev !important;
 }
 .dropdown-menu {
     background-color: $tx-h !important ;
-    border: 1px solid $tx-nev !important;
-    color:$tx-nev !important;
+    // border: 1px solid $tx-nev !important;
+    // color:$tx-nev !important;
     }
 .dropdown-item:hover, .dropdown-item:focus {
     color: $tx-h !important;
@@ -91,8 +91,9 @@ h2{
     }
 }
 .nav-link:hover{
-    color:$tx-h !important;
+    // color:$tx-h !important;
 }
+
 // ----------------------!!SubMail------------------------------------
 .ellen-email{
     padding: 0.5rem;
@@ -446,44 +447,38 @@ header>ellen-herobox{
     text-align: center;
 }
 .profile-img img{
-    width: 70%;
-    height: 100%;
-}
-.profile-img .file {
-    position: relative;
-    overflow: hidden;
-    margin-top: -20%;
-    width: 70%;
-    border: none;
-    border-radius: 0;
-    font-size: 15px;
-    background: #212529b8;
-}
-.profile-img .file input {
-    position: absolute;
-    opacity: 0;
-    right: 0;
-    top: 0;
-}
-.profile-head h5{
-    color: #333;
+    width: 50%;
+    // height: 100%;
 }
 .profile-head h6{
-    color: #0062cc;
+    color: #333;
 }
 .profile-edit-btn{
     border: none;
-    border-radius: 1.5rem;
-    width: 70%;
-    padding: 2%;
-    font-weight: 600;
-    color: #6c757d;
+    // border-radius: 1.5rem;
+    width: 100%;
+    // padding: 2%;
+    font-weight: 400;
+    background: $er-r;
+    // color: $bg-f;
     cursor: pointer;
 }
 .proile-rating{
     font-size: 12px;
     color: #818182;
     margin-top: 5%;
+}
+.ellen_tabe{
+    background: $bg-f;
+}
+.ellen_hover{
+    color:$bg-f !important;
+    :hover{
+        color:$bg-f !important;
+    }
+    :active{
+        color:$bg-f !important;
+    }
 }
 .proile-rating span{
     color: #495057;
@@ -499,7 +494,7 @@ header>ellen-herobox{
 }
 .profile-head .nav-tabs .nav-link.active{
     border: none;
-    border-bottom:2px solid #0062cc;
+    border-bottom:2px solid $bg-f;
 }
 .profile-work{
     padding: 14%;
@@ -513,9 +508,9 @@ header>ellen-herobox{
 }
 .profile-work a{
     text-decoration: none;
-    color: #495057;
+    color: $bg-f;
     font-weight: 600;
-    font-size: 14px;
+    // font-size: 14px;
 }
 .profile-work ul{
     list-style: none;
@@ -528,14 +523,17 @@ header>ellen-herobox{
     color: #0062cc;
 }
 .qty-box {
-    border: 1px solid #94c4ec;
+    border: 1px solid $bg-s;
     border-radius: 3px;
     display: block;
     height: 60px;
     margin: calc(50vh - 30px) auto 0 auto;
     width: 200px;
   }
-  
+.ellen_fs{
+    width: 35px;
+    margin: 0 5px;
+}
 //   span {
 //     color: #62a8e2;
 //     font-family: sans-serif;
@@ -545,7 +543,24 @@ header>ellen-herobox{
 //     width: calc(200px/3);
 //     -webkit-font-smoothing: antialiased;
 //}
+.qty-box {
+    border: 1px solid #94c4ec;
+    border-radius: 3px;
+    display: block;
+    height: 60px;
+    margin: calc(50vh - 30px) auto 0 auto;
+    width: 200px;
+  }
   
+  span {
+    color: #62a8e2;
+    font-family: sans-serif;
+    float: left;
+    line-height: 60px;
+    text-align: center;
+    width: calc(200px/3);
+    -webkit-font-smoothing: antialiased;
+  }
   .dec,
   .inc {
     height: 100%;

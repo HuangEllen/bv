@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Classification from './classification';
 import Items from './Items';
-import { strict } from 'assert';
 
 class college extends Component {
     constructor(props) {

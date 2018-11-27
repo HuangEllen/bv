@@ -18,7 +18,7 @@ class nav extends Component {
                     <div className=" container  ">
                         <ul className="navbar-nav container justify-content-around  ">
                             <li className="nav-item nav-link.active">
-                                <a href="#" className="nav-link">關於我們</a>
+                                <a href="#" className="nav-link ">關於我們</a>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navdrop" role="button" data-toggle="dropdown"

@@ -1,0 +1,58 @@
+/*--------------------color------------------------------*/
+$bg-f:#6eb7bb;
+$bg-hf:#84d1d1;
+$bg-s:#dbf3e5;
+$bg-s2:#ebf7f7;
+$er-r:#ed859b;
+$mes:#fbb03b;
+$tx-b:#000000;
+$tx-g:#808080;
+$tx-nev:#e6e6e6;
+$tx-h:#ffffff;
+
+
+// --------------------------!!ProfessorId----------------------------------
+.my_link{
+    display: block;
+    padding: 0.5rem 1rem;
+    color: $bg-f;
+    // background-color: #fff;
+    border:1px solid #fff;
+}
+.my_link:hover{
+    text-decoration: none;
+    color: #fff ;
+    border-color: $bg-f;
+    background-color: $bg-hf;
+
+}
+
+.my_link:focus{
+        text-decoration: none;
+        color: #fff ;
+        border-color: $bg-f;
+    
+}
+.ellen_active{
+    color: #fff;
+    background-color: $bg-f;
+    border-color: $tx-h;
+}
+.ellen_item{
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;    
+    flex: 1 1 auto;
+    text-align: center;
+    margin-bottom: -1px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.nav-link{
+    // color: $bg-f !important;
+    z-index: 99;
+}
+.show > .nav-link {
+    color: #fff;
+    background-color: #007bff;
+  }
