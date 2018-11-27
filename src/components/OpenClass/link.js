@@ -32,7 +32,7 @@ class linkclass extends React.Component {
                         <div className="col-md-3  mb-5 mt-5 " key={c_room.idx}>
                             <div className="product-grid ">
                                 <div className="product-image">
-                                    <a href="#">
+                                    <a href="#" className=" ellen_hidbox">
                                         <img className="pic-1" src={`/images/${c_room.c_img1} `} />
                                     </a>
                                     <ul className="social ">
@@ -42,7 +42,7 @@ class linkclass extends React.Component {
                                     <div className="product-discount-label "><img src="/images/tag-1.svg" /></div>
                                 </div>
                                 <div className="product-content">
-                                    <span className=""><h4>{c_room.c_title}</h4></span>
+                                    <h4>{c_room.c_title}</h4>
                                     <div className="d-flex justify-content-between ">
                                         <p className="ellen-p ">人數:{c_room.c_people}</p>
                                         <p className="ellen-p ">類型:{c_room.c_category}</p>

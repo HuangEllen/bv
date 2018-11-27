@@ -20,7 +20,7 @@ class aboutUs extends Component {
                             </p>
                         </div>
                         <div className="more">
-                            <button href="#" className="btn bg-first text-w">
+                            <button href="#" className="btn bg-first text-w ellen_btn">
                                 觀看更多
                             </button>
                         </div>
@@ -47,7 +47,7 @@ class aboutUs extends Component {
                             </p>
                         </div>
                         <div className="more">
-                            <button href="#" className="btn bg-first text-w">
+                            <button href="#" className="btn bg-first text-w ">
                                 觀看更多
                             </button>
                         </div>

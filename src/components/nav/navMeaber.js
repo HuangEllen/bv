@@ -12,12 +12,12 @@ class navMeaber extends Component {
                 <div className="collapse navbar-collapse " id="navbarText">
                     <ul className=" navbar-nav ml-md-auto d-md-flex">
                         <li className="nav-item">
-                            <a className="nav-link " href="#">登入
+                            <a className="nav-link " href="#">註冊
                                     
                             </a>
                         </li>
                         <li className="nav-item ellen-span">
-                            <a className="nav-link " href="#">登出  </a>
+                            <a className="nav-link " href="#">登入  </a>
                         </li>
 
                         <li className="nav-item">

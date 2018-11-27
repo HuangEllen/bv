@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  './allprofessor.scss'
+import './allprofessor.scss'
 
 class professor extends Component {
     render() {
@@ -13,9 +13,9 @@ class professor extends Component {
                                 <div className="profile-work">
                                     <h3 className="mt-4 mb-3">張玉青</h3>
                                     <div className='d-flex justify-content-center'>
-                                        <a href=""><img className="ellen_fs" src="https://img.icons8.com/ios/50/000000/dog-house-filled.png" /></a><br />
-                                        <a href=""><img className="ellen_fs" src="https://img.icons8.com/ios/50/000000/facebook-filled.png" /></a><br />
-                                        <a href=""><img className="ellen_fs" src="https://img.icons8.com/ios/50/000000/instagram-new-filled.png" /></a>
+                                        <a href=""><img className="ellen_fs" src="/images/icons8-dog-house-filled-50.png" /></a><br />
+                                        <a href=""><img className="ellen_fs" src="/images/icons8-facebook-filled-50.png" /></a><br />
+                                        <a href=""><img className="ellen_fs" src="/images/icons8-instagram-filled-50.png" /></a>
                                     </div>
                                     <h4 className="mt-3 mb-3">我的專長</h4>
                                     <p className="mt-1 mb-1">........</p>
@@ -74,14 +74,14 @@ class professor extends Component {
 spa網美容美體教育總監
 
                                     </h6>
-                                    <ul className="nav nav-tabs" id="myTab" role="tablist">
-                        <li className="ellen_item ">
-                            <a className="my_link ellen_active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">證書圖片</a>
-                        </li>
-                        <li className="ellen_item">
-                            <a className="my_link ellen_active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">我的課程</a>
-                        </li>
-                    </ul>
+                                <ul className="nav nav-tabs" id="myTab" role="tablist">
+                                    <li className="ellen_item ">
+                                        <a className="my_link ellen_active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">證書圖片</a>
+                                    </li>
+                                    <li className="ellen_item">
+                                        <a className="my_link ellen_active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">我的課程</a>
+                                    </li>
+                                </ul>
                             </div>
 
                             <div className="tab-content profile-tab" id="myTabContent">
@@ -129,25 +129,7 @@ spa網美容美體教育總監
                                 </div>
                                 <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                     <div className="row">
-                                        <div className="col-md-6">
-                                            <label>Experience</label>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <p>Expert</p>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <label>Hourly Rate</label>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <p>10$/hr</p>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <label>Total Projects</label>
-                                        </div>
+                                        
                                         <div className="col-md-6">
                                             <p>230</p>
                                         </div>
@@ -168,12 +150,7 @@ spa網美容美體教育總監
                                             <p>6 months</p>
                                         </div>
                                     </div>
-                                    <div className="row">
-                                        <div className="col-md-12">
-                                            <label>Your Bio</label><br />
-                                            <p>Your detail description</p>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

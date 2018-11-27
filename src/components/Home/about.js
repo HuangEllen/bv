@@ -5,7 +5,7 @@ class about extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="row">
+                <div className="row mt-5">
                     <div className="col-xs-12 col-sm-6 col-lg-4">
                         <div className="box">
                             <div className="icon">
@@ -29,7 +29,7 @@ class about extends Component {
                     <div className="col-xs-12 col-sm-6 col-lg-4">
                         <div className="box">
                             <div className="icon">
-                                <div className="image"><i className="fa fa-thumbs-o-up"></i></div>
+                                <div className="image"><i className="fas fa-graduation-cap"></i></div>
                                 <div className="info">
                                     <h3 className="title mt-3">教育學苑</h3>
                                     <p className=" ellen-h75">
@@ -49,7 +49,7 @@ class about extends Component {
                     <div className="col-xs-12 col-sm-6 col-lg-4">
                         <div className="box">
                             <div className="icon">
-                                <div className="image"><i className="fa fa-thumbs-o-up"></i></div>
+                                <div className="image"><i className="fas fa-paperclip"></i></div>
                                 <div className="info">
                                     <h3 className="title mt-3">美肌情報</h3>
                                     <p className=" ellen-h75">

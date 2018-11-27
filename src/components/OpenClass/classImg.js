@@ -1,38 +1,29 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 class classImg extends Component {
 
     render() {
         return (
 
-            <div className="preview col-md-6">
-                <div className="img-big-wrap">
-                    <div>
-                        <a href="#">
-                            <img src="https://via.placeholder.com/450x450 " />
-                        </a>
-                    </div>
-                    <div className="img-small-wrap d-flex justify-content-center mt-4">
-                        <div className="item-gallery mr-3">
-                            <a href="#"> <img src="https://via.placeholder.com/100x100" /> </a>
-                        </div>
-                        <div className="item-gallery mr-3">
-                            <a href="#"> <img src="https://via.placeholder.com/100x100" /> </a>
-                        </div>
-                        <div className="item-gallery ">
-                            <a href="#"> <img src="https://via.placeholder.com/100x100" /> </a>
-                        </div>
-                    </div>
-                    {/*  <ul className="preview-thumbnail nav nav-tabs">
-                                    <li className="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                                    <li><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                                    <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                                    <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                                    <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                                </ul> */}
-                </div>
-            </div>
+            <section id="default" className="padding-top0 col d-flex justify-content-center ml-5 mr-5">
+                <div className="row">
+                    <div className="large-5 column">
+                        <div className="xzoom-container">
+                            <img className="xzoom" id="xzoom-default" width="500" src="/images/a.jpg" />
+                            <div className="xzoom-thumbs mt-3">
+                                <a href="#">
+                                    <img className="xzoom-gallery" width="80"  src="/images/a.jpg"  title="The description goes here" /></a>
 
+                                <a href="#">
+                                    <img className="xzoom-gallery" width="80" src="/images/1387938109-1593935606.jpg" title="The description goes here" /></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="large-7 column"></div>
+                </div>
+            </section>
         )
     }
 }

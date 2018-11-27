@@ -19,17 +19,17 @@ class Items extends Component {
                             </div>
                             <div className="product-grid ">
                                 <div className="product-image">
-                                    <a href="#">
-                                        <img className="pic-1" src={`/images/${items.c_img1} `}/>
+                                    <a href="#" className=" ellen_hidbox">
+                                        <img className="pic-1 ellen_classbox" src={`/images/${items.c_img1} `}/>
                                     </a>
                                     <ul className="social ">
                                         <li><a href="" onClick={this.checkHandler} data-tip="加入收藏"><i className="fas fa-bookmark"></i></a></li>
                                         <li><a href="" onClick={this.addHandler} data-tip="加入購物車"><i className="fa fa-shopping-cart"></i></a></li>
                                     </ul>
-                                    <div className="product-discount-label "><img src="/images/tag-1.svg" /></div>
+                                    <div className="product-discount-label "><img src={`/images/${items.img_url} `} /></div>
                                 </div>
                                 <div className="product-content">
-                                    <span className=""><h4>{items.c_title}</h4></span>
+                                    <h4 className="text-f f_w400">{items.c_title}</h4>
                                     <div className="d-flex justify-content-between ">
                                         <p className="ellen-p ">人數:{items.c_people}</p>
                                         <p className="ellen-p ">類型:{items.c_category}</p>

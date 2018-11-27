@@ -33,9 +33,9 @@ class nav extends Component {
                                 <a className="nav-link dropdown-toggle" href="College" id="navdrop" role="button" data-toggle="dropdown"
                                     data-hover="dropdown">教育學苑</a>
                                 <div className="dropdown-menu" aria-labelledby="navdrop">
-                                    <Link to="/College" className="dropdown-item">College</Link>
-                                    <a href="OpenClass" className="dropdown-item">OpenClass</a>
-                                    <a href="Professor" className="dropdown-item">Professor</a>
+                                    <Link to="/College" className="dropdown-item">課程總攬</Link>
+                                    <a href="OpenClass" className="dropdown-item">我要開課</a>
+                                    <a href="Professor" className="dropdown-item">講師資群</a>
                                 </div>
                             </li>
                             <li className="nav-item">

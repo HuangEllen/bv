@@ -15,7 +15,7 @@ class college extends Component {
         this.getClass();
     }
     getClass() {
-        fetch("/allcroom/croom")  //http://localhost:3000/professor/api
+        fetch("/allcategory/course_category")  //http://localhost:3000/professor/api
             .then(res => res.json())
             .then(c_room => {
                 console.log(c_room)
