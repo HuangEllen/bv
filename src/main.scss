@@ -35,6 +35,9 @@ h2{
 .border-f{
     border: 1px solid $bg-f;
 }
+.table-hover tbody tr:hover {
+    background-color:$bg-s2;
+}
 .text-f{
     color:$bg-f;
 }
@@ -313,6 +316,16 @@ input{
     }
     
 }
+@media (max-width: 765px) {
+    .col-md-3{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .product-image{
+        // min-height: ;
+        height: 100%;
+    }
+}
 
 .product-grid {
     text-align: left;
@@ -326,7 +339,16 @@ input{
     position: relative;
     transition: all .3s ease 0s
 }
-
+.product-image{
+    
+    // height: 100%;
+}
+.product-content{
+    min-height: 10rem;
+}
+.product-grid{
+min-height: 10rem;
+}
 .product-grid .product-image a {
     display: block
 }
@@ -444,7 +466,7 @@ input{
     background-color: #fff;
     text-align: left;
     padding: 1rem 1rem;
-    margin: 0 auto;
+    // margin: 0 auto;
     // position: absolute;
     left: 0;
     right: 0;
@@ -494,12 +516,49 @@ input{
     border-radius: 0.5rem;
     background: #fff;
 }
-.profile-img{
-    text-align: center;
+.ellen_hidbox1{
+    overflow:hidden;
+    width: 10.5rem;
+    height: 10.5rem;
+    border: 4px solid $bg-f;
+    border-radius: 50% ;
+    // text-align: center;
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
-.profile-img img{
-    width: 50%;
+.ellen_hidbox2{
+    overflow:hidden;
+    width: 90%;
+    // height: 50%;
+    // height: 10.5rem;
+    // border: 4px solid $bg-f;
+    // border-radius: 50% ;
+    // text-align: center;
+    img{
+        width: 100%;
+    }
+}
+.ellen_hidbox3{
+    overflow:hidden;
+    width: 12rem;
+    height: 12rem;
+    border: 4px solid $bg-f;
+    // border-radius: 50% ;
+    // text-align: center;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.profile-img{
+    // text-align: center;
+}
+.profile-img {
+    // width: 50%;
     // height: 100%;
+    // border: 1px solid red;
 }
 .profile-head h6{
     color: #333;
@@ -548,7 +607,9 @@ input{
     border-bottom:2px solid $bg-f;
 }
 .profile-work{
-    padding: 14%;
+    // padding: 14%;
+    padding-top: 14%;
+    width: 100%;
     margin-top: -15%;
 }
 .profile-work p{
@@ -563,16 +624,7 @@ input{
     font-weight: 600;
     // font-size: 14px;
 }
-.profile-work ul{
-    list-style: none;
-}
-.profile-tab label{
-    font-weight: 600;
-}
-.profile-tab p{
-    font-weight: 600;
-    color: #0062cc;
-}
+
 .qty-box {
     border: 1px solid $bg-s;
     border-radius: 3px;

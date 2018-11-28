@@ -20,7 +20,7 @@ class openClass extends Component {
                         </div>
 
                     </div>
-                    <div className="d-flex justify-content-around">
+                    <div className="d-flex justify-content-around row">
                         <LinkClass />
                     </div>
                 </div>

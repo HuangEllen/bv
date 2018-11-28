@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProfessonId from './professorId';
+import Professon from './professor';
 class allprofessor extends Component {
 
     render() {
@@ -7,8 +7,8 @@ class allprofessor extends Component {
             <React.Fragment>
                 <div className="container ">
                     <h1>Professor</h1>
-                    <ProfessonId />
-
+                    <Professon />
+                    
                 </div>
 
 
