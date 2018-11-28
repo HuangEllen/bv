@@ -17,16 +17,16 @@ class professorId_about extends Component {
                             我的經歷
                                     </h3>
                         <h6 className="p-4 text-left">整體造型學院護膚spa講師
-                        1998年英國Tisserand Aromatherapy學院進修
-鄉村國際有限公司芳療講師
-2001年澳洲Spaing Fiecds芳療學院進修
-澳洲春天精油芳療講師
-中華美容美體促進協會理監事
-許莉伶美容教育總監
-妮頓絲美容教育講師
-絲翠兒專任美容講師
-溫州美泰公司施諾雅專任講師
-spa網美容美體教育總監
+                                                        1998年英國Tisserand Aromatherapy學院進修
+                                                        鄉村國際有限公司芳療講師
+                                                        2001年澳洲Spaing Fiecds芳療學院進修
+                                                        澳洲春天精油芳療講師
+                                                        中華美容美體促進協會理監事
+                                                        許莉伶美容教育總監
+                                                        妮頓絲美容教育講師
+                                                        絲翠兒專任美容講師
+                                                        溫州美泰公司施諾雅專任講師
+                                                        spa網美容美體教育總監
 
                                     </h6>
                         <ul className="nav nav-tabs" id="myTab" role="tablist">

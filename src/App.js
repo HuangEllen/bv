@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.scss';
 import './main.scss';
-import Box from './components/OpenClass/testbox/box'
+// import Box from './components/OpenClass/testbox/box'
 
 class App extends Component {
   
@@ -28,7 +28,7 @@ class App extends Component {
             <Route  path="/college" component={College} />
             <Route path='/openclass' component={OpenClass}/>
             <Route path ='/professor' component={Professor}/>
-            <Route path ='/test' component={Box}/>
+            {/* <Route path ='/test' component={Box}/> */}
 
           </div>
 
