@@ -7,7 +7,7 @@ class classText extends Component {
        
     }
 
-    componentWillMount() {
+    componentDidMount() {
        
         //console.log('this',this.props)
         console.log(this.props.items)

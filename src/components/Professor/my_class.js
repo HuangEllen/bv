@@ -15,7 +15,7 @@ class my_class extends React.Component {
         this.getClass();
     }
     getClass() {
-        fetch("/allcroom/croom")  //http://localhost:3000/professor/api
+        fetch("/allcategory/slider_page")  //http://localhost:3000/professor/api
             .then(res => res.json())
             .then(c_room => {
                 // console.log(c_room)

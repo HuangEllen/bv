@@ -19,7 +19,7 @@ class college extends Component {
         fetch("/allcategory/category_page")  //http://localhost:3000/professor/api
             .then(res => res.json())
             .then(c_room => {
-                // console.log(c_room)
+                console.log(c_room)
                 this.setState({ c_room: c_room })
             })
 

@@ -16,7 +16,7 @@ export default class linkclass extends React.Component {
         this.getClass();
     }
     getClass() {
-        fetch("/allcategory/category_page")  //http://localhost:3000/professor/api
+        fetch("/allcategory/slider_page")  //http://localhost:3000/professor/api
             .then(res => res.json())
             .then(c_room => {
                 console.log(c_room)
