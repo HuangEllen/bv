@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 class Items extends Component {
     constructor(props) {
         super(props);
+
     }
-    // componentDidMount() {
-    //     console.log('props', this.props)
-    // }
-    // <img className="pic-1" src={require(`../../../public/images/${items.c_img1}`)}/>
+
     render() {
+        console.log(this.professor)
         return (
             <React.Fragment>
 
@@ -17,9 +16,9 @@ class Items extends Component {
 
                     <div className="col-md-3  mb-5 mt-5" key={items.idx}>
                         <div className=" product-new-label">
-                            <a href="#">
+                            <Link to={`/professor/${items.user_id}`}>
                                 <img className="ellen-teach-p1" src={`/images/${items.img} `} />
-                            </a>
+                            </Link>
                         </div>
                         <div className="product-grid ">
                             <div className="product-image">

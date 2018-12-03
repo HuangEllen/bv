@@ -30,24 +30,25 @@ class professor extends Component {
             .then(professor => {
                 // console.log(c_room)
                 this.setState({ professor: professor[0] })
-            })}
-        render() {
-            return (
-                <React.Fragment>
-                    <div className="row">
-                        {/* <ClassFrom/> */}
-                        <ProfessorId professor={this.state.professor} teacher={this.state.teacher} />
-                        <div className="col-md-9 mt-5">
-                            <ProfessorIdAbout professor={this.state.professor}/>
-                            {/* <MyClassState/> */}
-
-                        </div>
-
+            })
+    }
+    render() {
+        return (
+            <React.Fragment>
+                <div className="row">
+                    {/* <ClassFrom/> */}
+                    <ProfessorId professor={this.state.professor} teacher={this.state.teacher} />
+                    <div className="col-md-9 mt-5">
+                        <ProfessorIdAbout professor={this.state.professor} />
+                        {/* <MyClassState/> */}
 
                     </div>
 
-                </React.Fragment>
-            )
-        }
+
+                </div>
+
+            </React.Fragment>
+        )
     }
-    export default professor;
+}
+export default professor;

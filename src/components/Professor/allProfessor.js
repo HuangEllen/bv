@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 
 class allprofessor extends Component {
@@ -6,9 +7,11 @@ class allprofessor extends Component {
         super(props);
         // console.log(this.state.professor.user_id);
         this.state = {
+            id: this.props.match.params.id,
             professor: [],
             // pop:true
         }
+        
     }
     componentDidMount() {
         //ajax call
@@ -39,9 +42,9 @@ class allprofessor extends Component {
                         {this.state.professor.map(professor =>
                             <div className="col-md-3 mt-4 text-center" key={professor.user_id}>
                                 <div className="team-member-id text-center border-f">
-                                    <a href={`/professor/${professor.user_id}`}>
+                                    <Link to={`/professor/${professor.user_id}`}>
                                         <img className="ellen_hidbox1 mt-3" src={`/images/${professor.user_img} `} alt="" />
-                                    </a>
+                                    </Link>
 
                                     <h3>{professor.teacher_name}</h3>
                                     <p>{professor.link_name}</p>
