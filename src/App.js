@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.scss';
 import './main.scss';
+import ClassFrom from './components/InOpenClass/class_from';
 // import Box from './components/OpenClass/testbox/box'
 
 class App extends Component {
@@ -26,10 +27,11 @@ class App extends Component {
             <Route exact path='/' component={Home}/>
             <Route  path='/home' component={Home}/>
             <Route  path="/college" component={College} />
-            <Route path='/openclass' component={OpenClass}/>
-            <Route path ='/professor' component={Professor}/>
+            <Route path='/openclass/:id' component={OpenClass}/>
+            {/* <Route path=/college/:id component={OpenClass} /> */}
+            <Route path ='/professor/:id' component={Professor}/>
             {/* <Route path ='/test' component={Box}/> */}
-
+            <Route path ='/class_from' component={ClassFrom}/>
           </div>
 
         </BrowserRouter>

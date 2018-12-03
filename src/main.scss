@@ -771,3 +771,46 @@ min-height: 10rem;
     font-weight: bold;
     padding: 10px;
   }
+//   ------------------------------------------------------------
+  
+.ellen_form input[type="text"],
+  .ellen_form input[type="number"],
+  .ellen_form input[type="date"],
+  .ellen_form textarea,
+  .ellen_form select {
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid $bg-f;
+    width: 100%;
+    color: #999 ;
+
+  }
+  .ellen_form input[type="text"]:focus, .ellen_form input[type="text"]:hover,
+  .ellen_form input[type="email"]:focus,
+  .ellen_form input[type="email"]:hover,
+  .ellen_form input[type="number"]:focus,
+  .ellen_form input[type="number"]:hover,
+  .ellen_form input[type="date"]:focus,
+  .ellen_form input[type="date"]:hover,
+  .ellen_form textarea:focus,
+  .ellen_form textarea:hover,
+  .ellen_form select:focus,
+  .ellen_form select:hover {
+    outline: none;
+    border-color: $mes;
+  }
+
+  .ellen_form select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    // color: #999;
+  }
+  .ellen_form label {
+    color: $bg-f;
+  }
+.custom-select{
+    padding: 12px;
+    height: 3rem ;
+    border-radius: 0;
+}

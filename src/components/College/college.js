@@ -7,7 +7,8 @@ class college extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            c_room: []
+            c_room: [],
+            // pop:true
         }
     }
     componentDidMount() {
@@ -15,10 +16,10 @@ class college extends Component {
         this.getClass();
     }
     getClass() {
-        fetch("/allcategory/course_category")  //http://localhost:3000/professor/api
+        fetch("/allcategory/category_page")  //http://localhost:3000/professor/api
             .then(res => res.json())
             .then(c_room => {
-                console.log(c_room)
+                // console.log(c_room)
                 this.setState({ c_room: c_room })
             })
 

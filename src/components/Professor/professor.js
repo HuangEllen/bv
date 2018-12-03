@@ -3,26 +3,50 @@ import './allprofessor.scss';
 import ProfessorIdAbout from './professorId_about';
 import ProfessorId from './professorId';
 import MyClassState from './my_class_state';
+// import ClassFrom from './class_from';
+
 
 
 
 class professor extends Component {
-    render() {
-        return (
-            <React.Fragment>
+    constructor(props) {
+        super(props)
+        this.state = {
+            // id: this.props.match.params.id,
+            professor: [],
+            teacher: false
+        }
+    }
+    componentDidMount() {
+        //ajax call
+        this.getClass()
+        console.log('id', this.state.id)
+    }
+    getClass() {
+        const th = this
+        fetch('/allcroom/croom/' + th.state.id)  //http://localhost:3000/professor/api
+            .then(res => res.json())
+            .then(professor => {
+                // console.log(c_room)
+                this.setState({ professor: professor })
+            })}
+        render() {
+            return (
+                <React.Fragment>
                     <div className="row">
-                        <ProfessorId/>
+                        {/* <ClassFrom/> */}
+                        <ProfessorId item={this.state.data} teacher={this.state.teacher} />
                         <div className="col-md-9 mt-5">
-                        {/* <ProfessorIdAbout /> */}
-                        <MyClassState/>
-                        
+                            <ProfessorIdAbout />
+                            {/* <MyClassState/> */}
+
                         </div>
-                        
+
 
                     </div>
 
-            </React.Fragment>
-        )
+                </React.Fragment>
+            )
+        }
     }
-}
-export default professor;
+    export default professor;

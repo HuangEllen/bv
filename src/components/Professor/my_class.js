@@ -27,10 +27,10 @@ class my_class extends React.Component {
 
         return (
             <React.Fragment>
-                <div className="owl-carousel owl-theme row">
+                <div className=" row d-flex justify-content-center">
                     {this.state.c_room.map(c_room =>
 
-                        <div className="col-6  mb-5 mt-5" >
+                        <div className="col-5  mb-5 mt-5" >
                             <div className=" product-new-label">
                                 <a href="#">
                                     <img className="ellen-teach-p1" src="/images/tpic1.jpg" />

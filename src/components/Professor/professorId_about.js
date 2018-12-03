@@ -52,17 +52,11 @@ class professorId_about extends Component {
                         </div>
                         <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div className="row d-flex flex-column align-items-center">
-                                <div className="row ">
+                                <div className="row justify-content-center">
                                     <h3 className="text-f">上架中</h3>
                                     <MyClass />
                                 </div>
-                                <div className="row ">
-                                    <h3 className="text-f">下架中</h3>
-
-                                    <MyClass />
-
-                                </div>
-                                <div className="row ">
+                                <div className="row justify-content-center">
                                     <h3 className="text-f">已參加</h3>
 
                                     <MyClass />
