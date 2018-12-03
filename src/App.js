@@ -4,7 +4,8 @@ import Nav from './components/nav/nav';
 import Footer from './components/footer/footer';
 import College from './components/College/college';
 import Home from './components/Home/home';
-import Professor from './components/Professor/allProfessor';
+import Professor from './components/Professor/professor';
+import AllProfessor from './components/Professor/allProfessor';
 import OpenClass from './components/OpenClass/openClass';
 import SubMail from './components/footer/submeil'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,8 +28,9 @@ class App extends Component {
             <Route exact path='/' component={Home}/>
             <Route  path='/home' component={Home}/>
             <Route  path="/college" component={College} />
+            <Route exact path='/openclass' component={OpenClass}/>
             <Route path='/openclass/:id' component={OpenClass}/>
-            {/* <Route path=/college/:id component={OpenClass} /> */}
+            <Route exact path ='/professor' component={AllProfessor}/>
             <Route path ='/professor/:id' component={Professor}/>
             {/* <Route path ='/test' component={Box}/> */}
             <Route path ='/class_from' component={ClassFrom}/>

@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
 import Quantity from './quantity';
+import moment from 'moment'; 
 
 class classText extends Component {
     constructor(props) {
         super(props);
        
     }
-
-    componentDidMount() {
-       
-        //console.log('this',this.props)
-        console.log(this.props.items)
-            }
     render() {
+        let items=this.props.items;
+
         return (
+            
             <React.Fragment>
                     <div className="details col d-flex flex-column justify-content-center ml-5 mr-5 ml-5 mr-5" >
                         <div className="card ellen_menue p-4">
-                            <h3 className="product-title mt-2">{this.props.c_title}</h3>
-                            <h3 className="review-no mt-3">NT 1,800</h3>
+                            <h3 className="product-title mt-2">{items.c_title}</h3>
+                            <h3 className="review-no mt-3">NT {items.amount}</h3>
                             <div>
                                 <Quantity />
                             </div>
@@ -32,7 +30,7 @@ class classText extends Component {
                             <div className="d-flex mt-3 justify-content-center">
                                 <a href=""><i className="fa fa-heart mr-3 mb-2 txt_mes"></i></a><h5 className="sizes">分享此商品</h5>
                             </div>
-                            <p className="ellen-p ">預計開課時間:2018/12/23</p>
+                            <p className="ellen-p ">預計開課時間:{moment(this.props.items.c_opdate).format('YYYY-MM-DD')}</p>
                         </div>
                     </div>
 

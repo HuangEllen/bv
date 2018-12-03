@@ -4,19 +4,23 @@ import $ from 'jquery';
 class classImg extends Component {
 
     render() {
+        let items=this.props.items;
         return (
 
             <section id="default" className="padding-top0 col d-flex justify-content-center ml-5 mr-5">
                 <div className="row">
                     <div className="large-5 column">
                         <div className="xzoom-container">
-                            <img className="xzoom" id="xzoom-default" width="500" src="/images/a.jpg" />
+                            <img className="xzoom" 
+                                    id="xzoom-default" 
+                                    width="500" 
+                                    src={`/images/${items.c_img1} `} />
                             <div className="xzoom-thumbs mt-3">
                                 <a href="#">
-                                    <img className="xzoom-gallery" width="80"  src="/images/a.jpg"  title="The description goes here" /></a>
+                                    <img className="xzoom-gallery" width="80"  src={`/images/${items.c_img1} `}  title="課程照片" /></a>
 
                                 <a href="#">
-                                    <img className="xzoom-gallery" width="80" src="/images/1387938109-1593935606.jpg" title="The description goes here" /></a>
+                                    <img className="xzoom-gallery" width="80" src={`/images/${items.c_img2} `} title="課程照片" /></a>
 
                             </div>
                         </div>

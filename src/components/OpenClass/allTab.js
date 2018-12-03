@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
-// import Tab from './tab';
+import moment from 'moment'; 
 
 
 class allTab extends Component {
     // constructor(props) {
     //     super(props);
 
-    // const Pane = props => (
-    //     <div className={"tab-pane" + (props.activepane ? " active" : "")} id={props.id}>
-    //         {props.children}
-    //     </div>
-    // )
-    //}
+    // }
     render() {
+        let items=this.props.items;
         return (
+            
             <React.Fragment>
                 <div className="container  col-10">
                     <h2 className=" mt-5">課程介紹</h2>
 
                     <h3 className=" mt-5">課程內容</h3>
-                    <p>時間：</p>
-                    <p>地點：</p>
-                    <p>Build encapsulated components that manage their own state, then compose them to make complex UIs.We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.</p>
+                    <h4 className="mt-4">時間：{moment(this.props.items.c_opdate).format('YYYY-MM-DD  h:mm a')}</h4>
+                    <h4 className="mt-4">地點：{items.c_address}{items.c_area}</h4>
+                    <p className="mt-4">{items.c_detail}</p>
                 </div>
                 <div className="container mt-5 col-10">
                     <h3 className=" mt-3">關於講師</h3>

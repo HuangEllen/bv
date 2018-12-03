@@ -12,8 +12,8 @@ class professor extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            // id: this.props.match.params.id,
-            professor: [],
+            id: this.props.match.params.id,
+            professor: {},
             teacher: false
         }
     }
@@ -21,23 +21,24 @@ class professor extends Component {
         //ajax call
         this.getClass()
         console.log('id', this.state.id)
+        console.log(this.props.match.params.id)
     }
     getClass() {
         const th = this
-        fetch('/allcroom/croom/' + th.state.id)  //http://localhost:3000/professor/api
+        fetch('/professorId/professor/' + th.state.id)  //http://localhost:3000/professor/api
             .then(res => res.json())
             .then(professor => {
                 // console.log(c_room)
-                this.setState({ professor: professor })
+                this.setState({ professor: professor[0] })
             })}
         render() {
             return (
                 <React.Fragment>
                     <div className="row">
                         {/* <ClassFrom/> */}
-                        <ProfessorId item={this.state.data} teacher={this.state.teacher} />
+                        <ProfessorId professor={this.state.professor} teacher={this.state.teacher} />
                         <div className="col-md-9 mt-5">
-                            <ProfessorIdAbout />
+                            <ProfessorIdAbout professor={this.state.professor}/>
                             {/* <MyClassState/> */}
 
                         </div>

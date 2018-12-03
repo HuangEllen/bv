@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 class logo extends Component {
 
     render() {
         return (
             <h1 className=" logo">
-                <a className="navbar-brand" href="Home"><img src="/images/logo.svg" alt="Home" /></a>
+                <Link className="navbar-brand" to="/Home"><img src="/images/logo.svg" alt="Home" /></Link>
             </h1>
 
         )

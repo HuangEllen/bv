@@ -9,7 +9,7 @@ class openClass extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            c_room: [],
+            c_room: {},
             id: this.props.match.params.id,
             // data:{}
         }
@@ -31,8 +31,8 @@ this.getClass()
         fetch('/allcroom/croom/' + th.state.id)  //http://localhost:3000/professor/api
             .then(res => res.json())
             .then(c_room => {
-                console.log(c_room)
-                this.setState({ c_room: c_room })
+                console.log(c_room[0])
+                this.setState({ c_room: c_room[0] })
             })
         // fetch('/allcroom/croom/' + th.state.id)  //http://localhost:3000/professor/api
         //     .then(res => res.json())

@@ -6,6 +6,7 @@ import Items from './Items';
 class college extends Component {
     constructor(props) {
         super(props);
+        // console.log(this.props.match.params.c_category);
         this.state = {
             c_room: [],
             // pop:true
@@ -16,11 +17,16 @@ class college extends Component {
         this.getClass();
     }
     getClass() {
-        fetch("/allcategory/category_page")  //http://localhost:3000/professor/api
+        // var a=this.state.page,
+        //     b=this.state.c_category;
+        fetch("/allcategory/slider_page/")  //http://localhost:3000/professor/api
             .then(res => res.json())
             .then(c_room => {
                 console.log(c_room)
-                this.setState({ c_room: c_room })
+                // console.log(this.props.match.params.c_category);
+                this.setState({ 
+                    c_room: c_room 
+                })
             })
 
     }
