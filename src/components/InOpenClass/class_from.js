@@ -2,15 +2,46 @@ import React, { Component } from 'react';
 // import './allprofessor.scss'
 
 class class_from extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            id: this.props.match.params.id,
+            professor: {},
+        }
+    }
+
+    componentDidMount() {
+        //ajax call
+        this.getClass()
+        // this.getState()
+        console.log('id', this.state.id)
+        console.log(this.props.match.params.id)
+    }
+    getClass() {
+        const th = this
+        fetch('/professorId/professor/' + th.state.id)  //http://localhost:3000/professor/api
+            .then(res => res.json())
+            .then(professor => {
+                // console.log(professor)
+                this.setState({ professor: professor[0] })
+            })
+        // fetch("/allcategory/mystart/" + th.state.id + '/'+1)  //http://localhost:3000/professor/api
+        // .then(res => res.json())
+        // .then(c_room => {
+        //     // console.log(this.state.userid)
+        //     this.setState({ c_room: c_room })
+        // })
+    }
     render() {
+        let items = this.state.professor;
         return (
             <React.Fragment>
                 <div className="container">
                     <form>
-                        <h3 className="mt-5">我要開課</h3>
-                        <p className="mt-3">您好 XX 講師 請填寫下列資料</p>
-                        <div className="form-row ">
-                            <div className="form-group col-md-9 text-left ellen_form">
+                        <h2 className="mt-5 txt_mes">我要開課</h2>
+                        <p className="mt-3 d-flex justify-content-center"> 您好  <h4 className="text-f ml-3 mr-3">{items.teacher_name}</h4> 講師 請填寫下列資料</p>
+                        <div className="row d-flex">
+                            <div className=" col-md-9 text-left ellen_form ">
                                 <label htmlFor="myClassName">課程名稱</label>
                                 <input type="text" className="floatLabel " id="myClassName"
                                     name="myClassName" placeholder="請輸入課程名稱" />
@@ -27,7 +58,9 @@ class class_from extends Component {
 
                                 </select>
                             </div>
-                            <div className="form-group col-md-4 text-left ellen_form">
+                        </div>
+                        <div className="row d-flex">
+                            <div className="form-group col-md-4 col-sm text-left ellen_form">
                                 <label htmlFor="myClassPeople">人數限制</label>
                                 <input type="text" className="floatLabel" id="myClassPeople"
                                     name="myClassPeople" placeholder="請輸入你的人數" />
@@ -37,26 +70,26 @@ class class_from extends Component {
                                 <input type="number" className="floatLabel" id="myClassAmount"
                                     name="myClassAmount" placeholder="請輸入金額" />
                             </div>
-                            <div className="form-group col-md-4 text-left ellen_form">
+                            <div className="form-group col-md-4 text-left ellen_form ">
                                 <label htmlFor="myClassDate ">開課日期</label>
-                                <input type="date" className="floatLabel" id="myClassDate"
+                                <input type="date" className="floatLabel " id="myClassDate"
                                     name="myClassDate" placeholder="選擇日期" />
                             </div>
                         </div>
                         <label className="text-f ">開課地點</label>
                         <div className="form-row mb-2 ellen_form">
-                            <div className="col-md-3">
+                            <div className="col-md-3 mb-3">
                                 <input type="text" className="floatLabel" placeholder="請輸入縣市" id="myClassCity"
                                     name="myClassCity" />
                             </div>
                             <div className="col-md-9">
-                                <input type="text" className="floatLabel" placeholder="請輸入地址" id="myClassAddress"
+                                <input type="text" className="" placeholder="請輸入地址" id="myClassAddress"
                                     name="myClassAddress" />
                             </div>
                         </div>
                         <h3 className="mt-5">課程內容</h3>
-                        <div className="ellen_form">
-                            <input type="text" id="country" className="floatLabel" name="country" placeholder="請輸入此課程內容" />
+                        <div className="ellen_form form-row ellen_floatLabel">
+                            <textarea type="text" id="" className=" input-group" name="country" placeholder="請輸入此課程內容" />
 
                         </div>
                         <h3 className="mt-5">課程圖片</h3>

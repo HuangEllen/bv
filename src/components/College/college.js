@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Classification from './classification';
 import Items from './Items';
 
 class college extends Component {
@@ -9,39 +7,109 @@ class college extends Component {
         // console.log(this.props.match.params.c_category);
         this.state = {
             c_room: [],
+            total: [],
+            ation: false,//true 
+            // cs_id: this.state.c_room.idx,
+            // id:this.e.currentTarget.id
             // pop:true
         }
     }
+    toggle = () => this.setState({ ation: !this.state.ation })
     componentDidMount() {
         //ajax call
+        // this.getAllClass();
         this.getClass();
+        this.getTotal();
+        console.log(this.id)
+        // this.onChange();
     }
-    getClass() {
-        // var a=this.state.page,
-        //     b=this.state.c_category;
-        fetch("/allcategory/slider_page/")  //http://localhost:3000/professor/api
+    // getAllClass() {
+    //     // 直接從父類別傳送類別參數去呼叫api回傳的值就重新跑map渲染畫面
+    //     fetch("/allcategory/slider_page/" )  //http://localhost:3000/allcategory/slider_page
+    //         .then(res => res.json())
+    //         .then(c_room => {
+    //             console.log(c_room)
+    //             console.log(this.category)
+    //             // console.log(this.props.match.params.c_category);
+    //             this.setState({
+    //                 c_room: c_room,
+    //                 // category: ''
+    //             })
+    //         })
+    // }
+    getClass(id) {
+        // 直接從父類別傳送類別參數去呼叫api回傳的值就重新跑map渲染畫面
+        if (!id) {
+            id = ''
+        }
+        //把api呼叫的參數使用setState變更參數他就會重新選染列表  map渲染變數放在state裡面去渲染更新
+        fetch("/allcategory/slider_page/"+id )  //http://localhost:3000/allcategory/slider_page
             .then(res => res.json())
             .then(c_room => {
                 console.log(c_room)
+                console.log(this.id)
                 // console.log(this.props.match.params.c_category);
-                this.setState({ 
-                    c_room: c_room 
+                this.setState({
+                    c_room: c_room,
+                    // category: ''
                 })
             })
-
     }
-
+    getTotal() {
+        fetch('/allcategory/category_page')  //http://localhost:3000/allcategory/category_page
+            .then(res => { res.json() })
+            .then(total => {
+                console.log(total)
+                this.setState({
+                    total: total
+                })
+            })
+    }
+    // onChange = (e,id) => {
+    //     //console.log(id)
+    //     //const value = e.currentTarget.id;
+    //     this.setState({ category: id });
+    //     console.log(this.state.category)
+    // }
 
     render() {
-        // console.log(Storage(this.items));
         return (
             <React.Fragment>
                 <div className="container ">
-                    <Classification />
-                    <div className="row">
-                    <Items items={this.state.c_room} />
+                    <div className="row d-flex justify-content-end bg-s p-2 myMOUSE" onClick={this.toggle}>
+                        <h5 className="mr-2">進階篩選</h5>
+                        <i className="ellen-fas fas fa-angle-down"></i>
                     </div>
-                    
+
+                    {this.state.ation ? <div className="row bg-s d-flex justify-content-around ellen-boxbh ">
+                        <div className="col-5 d-flex flex-column  align-items-start justify-content-start">
+                            <div className="text-left">
+                                <h5 >所有課程</h5>
+                            </div>
+                            <div className="d-flex  row ellen-boxh  col mt-2 ellen-bt flex-column align-items-start">
+                                <a href="#" onClick={() => this.getClass(1)}> <p className=" mr-3 ellen-p"   >證照課程</p> </a>
+                                <a href="#" onClick={() => this.getClass(2)}> <p className=" mr-3 ellen-p"  >護膚技術課程</p> </a>
+                                <a href="#" onClick={() => this.getClass(3)}> <p className=" mr-3 ellen-p"  >保養技術課程</p> </a>
+                                <a href="#" onClick={() => this.getClass(4)}> <p className=" mr-3 ellen-p"  >專業技術課程</p> </a>
+                                <a href="#" onClick={() => this.getClass(5)}> <p className=" mr-3 ellen-p"  >企業講座</p> </a>
+                            </div>
+                        </div>
+                        <div className="col-5 d-flex flex-column  align-items-start justify-content-start  ">
+                            <div className="text-left">
+                                <h5 >排序</h5>
+                            </div>
+                            <div className="d-flex  row ellen-boxh  col mt-2 ellen-bt flex-column align-items-baseline">
+                                <a href="#"> <p className=" mr-3 ellen-p">優惠消息</p> </a>
+                                <a href="#"> <p className=" mr-3 ellen-p">團體優惠</p> </a>
+                                <a href="#"> <p className=" mr-3 ellen-p">最多詢問</p> </a>
+                                <a href="#"> <p className=" mr-3 ellen-p">最新上架</p> </a>
+                            </div>
+                        </div>
+                    </div> : null}
+                    <div className="row">
+                        <Items items={this.state.c_room} total={this.state.total} />
+                    </div>
+
                 </div>
             </React.Fragment>
         )

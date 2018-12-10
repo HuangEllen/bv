@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import './allprofessor.scss';
 
 class professorid extends Component {
@@ -57,7 +58,8 @@ class professorid extends Component {
                                 <button className="btn profile-edit-btn text-w" style={{ display: this.state.teacher ? 'none' : 'block' }} >課程狀態</button>
                             </div>
                             <div className="col mt-4">
-                                <button className="btn profile-edit-btn text-w" style={{ display: this.state.teacher ? 'none' : 'block' }} >我要開課</button>
+                                <Link to={`/class_from/${items.idx}`}><button className="btn profile-edit-btn text-w" style={{ display: this.state.teacher ? 'none' : 'block' }} >我要開課</button></Link>
+                                
                             </div>
                         </div>
                     </div>

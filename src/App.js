@@ -13,7 +13,8 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.scss';
 import './main.scss';
 import ClassFrom from './components/InOpenClass/class_from';
-// import Box from './components/OpenClass/testbox/box'
+import ClassPutFrom from './components/InOpenClass/class_putfrom';
+
 
 class App extends Component {
   
@@ -33,7 +34,8 @@ class App extends Component {
             <Route exact path ='/professor' component={AllProfessor}/>
             <Route path ='/professor/:id' component={Professor}/>
             {/* <Route path ='/test' component={Box}/> */}
-            <Route path ='/class_from' component={ClassFrom}/>
+            <Route path ='/class_from/:id' component={ClassFrom}/>
+            <Route path ='/class_from//put/:id' component={ClassPutFrom}/>
           </div>
 
         </BrowserRouter>

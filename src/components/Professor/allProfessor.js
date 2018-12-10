@@ -46,8 +46,8 @@ class allprofessor extends Component {
                                         <img className="ellen_hidbox1 mt-3" src={`/images/${professor.user_img} `} alt="" />
                                     </Link>
 
-                                    <h3>{professor.teacher_name}</h3>
-                                    <p>{professor.link_name}</p>
+                                    <h3 className="mt-4">{professor.teacher_name}</h3>
+                                    <p>專長：{professor.link_name}</p>
                                 </div>
                             </div>
                         )}

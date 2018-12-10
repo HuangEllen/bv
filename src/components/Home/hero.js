@@ -14,14 +14,15 @@ class hero extends Component {
 					</ol>
 					<div className="carousel-inner ">
 						<div className="carousel-item active " >
-						{/* <div className="carousel-item active ellen_hero_box" style={{background:"url(/images/b02.jpg)"}}> */}
+							{/* <div className="carousel-item active ellen_hero_box" style={{background:"url(/images/b02.jpg)"}}> */}
 							<img className="first-slide ellen-hero" src="/images/b02.jpg" alt="First slide " />
 							<div className="container">
-								<div className="carousel-caption text-left">
-									<h1 className="text-b">Example headline.</h1>
-									<p className="text-b">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+								{/* <div className="carousel-caption text-left">
 									<p className="ellen_btn"><a className="btn btn-lg bg-first text-w " href="#" role="button">詳 細 資 訊</a></p>
 								</div>
+								<div className="carousel-caption text-right">
+									<p className="ellen_btn "><a className="btn btn-lg bg_mes text-w " href="#" role="button">優 惠 資 訊</a></p>
+								</div> */}
 							</div>
 						</div>
 						{/* <div className="carousel-item active ellen_hero_box" style={{background:"url(/images/b01.jpg)"}}>> */}
@@ -29,8 +30,8 @@ class hero extends Component {
 							<img className="second-slide ellen-hero" src="/images/b01.jpg" alt="Second slide" />
 							<div className="container">
 								<div className="carousel-caption text-left">
-									<h1 className="text-b">Example headline.</h1>
-									<p className="text-b">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+									{/* <h1 className="txt_mes">微循環潔膚乳</h1> */}
+									<p className="text-b">強化肌膚防護實力，是暢活微循環保養程序的第一步驟</p>
 									<p className="ellen_btn"><a className="btn btn-lg bg-first text-w" href="#" role="button">詳 細 資 訊</a></p>
 								</div>
 							</div>
@@ -40,8 +41,9 @@ class hero extends Component {
 							<img className="third-slide ellen-hero" src="/images/b03.jpg" alt="Third slide" />
 							<div className="container">
 								<div className="carousel-caption text-right">
-									<h1 className="text-b">One more for good measure.</h1>
-									<p className="text-b">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+									<h1 className="text-w">鎂光銀燦保濕精華液</h1>
+									<p className="text-b">保濕水嫩神器全面飽水，</p>
+									<p className="text-b">打造完美水嫩肌草本修護，維持肌膚水含量</p>
 									<p className="ellen_btn"><a className="btn btn-lg bg-first text-w" href="#" role="button">詳 細 資 訊</a></p>
 								</div>
 							</div>
