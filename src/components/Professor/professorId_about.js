@@ -42,6 +42,7 @@ class professorId_about extends Component {
         })
       })
   }
+  
   updateStatus(start,classid,teacherid,th,e){
     //function的值跟api設定的值是反向執行(需再爬文)
     let data = {}
@@ -134,11 +135,19 @@ class professorId_about extends Component {
                   <td data-label="課程狀態">{start.start_name}</td>
                   <td data-label="開課時間">{moment(start.c_opdate).format('YYYY-MM-DD  h:mm a')}</td>
                   <td data-label="修改/上架">
-                    <button className="btn mr-3 bg_mes text-w" onClick={this.updateStatus.bind(this,1,start.cs_id,this.state.teacherId,this.state.th)} style={{ display: start.start=== 2 ? '' : 'none' }}>上架</button>
-                    <button className="btn mr-3 bg-first text-w" onClick={this.updateStatus.bind(this,2,start.cs_id,this.state.teacherId,this.state.th)} style={{ display: start.start===  1 ? '' : 'none' }}>下架</button>
+                    <button className="btn mr-3 bg_mes text-w" 
+                    onClick={this.updateStatus.bind(this,1,start.cs_id,this.state.teacherId,this.state.th)} 
+                    style={{ display: start.start=== 2 ? '' : 'none' }}>上架</button>
+
+                    <button className="btn mr-3 bg-first text-w" 
+                    onClick={this.updateStatus.bind(this,2,start.cs_id,this.state.teacherId,this.state.th)} 
+                    professorClick={this.props.professorClick()}
+                    style={{ display: start.start===  1 ? '' : 'none' }}>下架</button>
+
                     <Link to={`/class_from//put/${items.user_id}`} >
                     <button className="btn bg_er-r text-w">修改</button>
                     </Link>
+
                   </td>
                 </tr>
               )} 

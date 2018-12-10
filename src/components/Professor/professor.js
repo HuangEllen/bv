@@ -57,7 +57,10 @@ class professor extends Component {
         })
       })
   }
+  professorClick=()=>{
+      this.getState()
 
+  }
   render() {
     let items = this.state.professor;
     let myclsnb = this.state.myclsnb;
@@ -108,8 +111,13 @@ class professor extends Component {
               </div>
             </div>
             <div className="col-md-9 mt-5">
-              <ProfessorIdAbout professor={this.state.professor} id={this.props.match.params.id} showV={this.state.showV} />
-              {/* <MyState start={this.state.start}/> */}
+              <ProfessorIdAbout professor=
+              {this.state.professor} 
+              id={this.props.match.params.id} 
+              showV={this.state.showV} 
+              professorClick={this.professorClick} 
+              />
+              
 
             </div>
 

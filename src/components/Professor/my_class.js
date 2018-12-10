@@ -12,9 +12,9 @@ class my_class extends React.Component {
     }
     componentDidMount() {
         //ajax call
-        this.getClass();
+        this.getOpClass();
     }
-    getClass() {
+    getOpClass() {
         // const id = 1;
         fetch("/allcategory/mystart/" + this.props.id +'/1')  //http://localhost:3000/professor/api
             .then(res => res.json())
