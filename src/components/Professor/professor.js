@@ -13,14 +13,10 @@ class professor extends Component {
     this.state = {
       id: this.props.match.params.id,
       professor: {},
-      // c_room: {},
-      // teacher: this.props.teacher,
       teacher: false,//true  使用者是否為講師本人的按鈕顯示
-      // start:[],
       myclsnb:{},
       showV:true,
       th:this,
-      // contactClick:this.contactClick
     }
   }
   
@@ -57,7 +53,7 @@ class professor extends Component {
         })
       })
   }
-
+//經由事件結尾再次呼叫API達到即時重新渲染
   handleClick = (data)=>{
     //setState();
     // this.setState({
