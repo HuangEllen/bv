@@ -20,19 +20,19 @@ class my_class extends React.Component {
             .then(res => res.json())
             .then(c_room => {
                 // console.log(this.state.userid)
+                // this.props.myClassClick();
                 this.setState({ c_room: c_room })
             })
-
     }
     render() {
 
         return (
-            <React.Fragment>
+            <React.Fragment >
                 
                     {this.state.c_room.map(c_room =>
 
-                        <div className="col-md-6  mb-5 mt-5" key={c_room.idx}>
-                            <div className=" product-new-label">
+                        <div className="col-md-6  mb-5 mt-5"  key={c_room.idx}>
+                            <div className=" product-new-label" >
                                 <Link to={`/professor/${c_room.user_id}`}>
                                     <img className="ellen-teach-p1" src={`/images/${c_room.user_img} `} />
                                 </Link>

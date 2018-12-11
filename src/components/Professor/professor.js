@@ -13,21 +13,21 @@ class professor extends Component {
     this.state = {
       id: this.props.match.params.id,
       professor: {},
-      c_room: {},
+      // c_room: {},
       // teacher: this.props.teacher,
       teacher: false,//true  使用者是否為講師本人的按鈕顯示
       // start:[],
       myclsnb:{},
       showV:true,
-      th:this
-      
+      th:this,
+      // contactClick:this.contactClick
     }
   }
   
   componentWillMount() {
     //ajax call
     this.getClass()
-    this.getState()
+    this.getNumber()
     console.log('id', this.state.id)
     console.log(this.props.match.params.id)
     
@@ -46,7 +46,7 @@ class professor extends Component {
         this.setState({ professor: professor[0] })
       })
   }
-  getState() {
+  getNumber() {
     const th = this
       fetch('/allcategory/order/' + th.state.id+ "/1")  //http://localhost:3000/professor/api
       .then(res => res.json())
@@ -57,9 +57,14 @@ class professor extends Component {
         })
       })
   }
-  professorClick=()=>{
-      this.getState()
 
+  handleClick = (data)=>{
+    //setState();
+    // this.setState({
+    //   myclsnb: myclsnb[0]
+    // })
+   // alert(data)
+   this.getNumber();
   }
   render() {
     let items = this.state.professor;
@@ -111,12 +116,12 @@ class professor extends Component {
               </div>
             </div>
             <div className="col-md-9 mt-5">
-              <ProfessorIdAbout professor=
-              {this.state.professor} 
+              <ProfessorIdAbout 
+              professor={this.state.professor} 
               id={this.props.match.params.id} 
               showV={this.state.showV} 
-              professorClick={this.professorClick} 
-              />
+              proClick = {this.handleClick} />
+              
               
 
             </div>
