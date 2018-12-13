@@ -41,12 +41,15 @@ class class_from extends Component {
                         <h2 className="mt-5 txt_mes">修改課程</h2>
                         <p className="mt-3 d-flex justify-content-center"> 您好  <h4 className="text-f ml-3 mr-3">{items.teacher_name}</h4> 講師 請修改下列資料</p>
                         <div className="row d-flex">
-                            <div className=" col-md-9 text-left ellen_form ">
+                            <div className=" col-md-12 text-left ellen_form ">
                                 <label htmlFor="myClassName">課程名稱</label>
                                 <input type="text" className="floatLabel " id="myClassName"
                                     name="myClassName" placeholder="請輸入課程名稱" />
                             </div>
-                            <div className="form-group col-md-3 text-left ellen_form">
+
+                        </div>
+                        <div className="row d-flex mt-3">
+                            <div className="form-group col-md-6 text-left ellen_form">
                                 <label htmlFor="myCategory">課程類別</label>
                                 <select className="custom-select  ellen_form" id="myCategory" name="myCategory" >
                                     <option selected>請選擇課程類別</option>
@@ -56,6 +59,22 @@ class class_from extends Component {
                                     <option value="4">肌膚護理</option>
                                     <option value="5">企業講座</option>
 
+                                </select>
+                            </div>
+                            <div className="form-group col-md-6 text-left ellen_form">
+                                <label htmlFor="myCategory">產品類型</label>
+                                <select className="custom-select  ellen_form" id="myCategory" name="myCategory" >
+                                    <option selected>請選擇課使用產品</option>
+                                    <option value="1">一淨到底白泥潔顏乳</option>
+                                    <option value="2">毛孔深層清潔泥</option>
+                                    <option value="3">超能紅石榴微循環潔膚乳</option>
+                                    <option value="4">深層卸粧精華露</option>
+                                    <option value="5">天生麗質粉美肌精華</option>
+                                    <option value="6">生命之源金萃精華液</option>
+                                    <option value="7">凍妍新肌澎潤精華</option>
+                                    <option value="8">鎂光銀燦保濕精華液</option>
+                                    <option value="9">逆時完美再造精華</option>
+                                    <option value="10">逆時緊緻精華乳</option>
                                 </select>
                             </div>
                         </div>
@@ -77,7 +96,7 @@ class class_from extends Component {
                             </div>
                         </div>
                         <label className="text-f ">開課地點</label>
-                        <div className="form-row mb-2 ellen_form">
+                        <div className=" mb-2 ellen_form row d-flex">
                             <div className="col-md-3 mb-3">
                                 <input type="text" className="floatLabel" placeholder="請輸入縣市" id="myClassCity"
                                     name="myClassCity" />

@@ -21,12 +21,7 @@ class professorId_about extends Component {
     console.log('show', this.state.showV)
     // console.log('id', this.props.id)
   }
-  // componentDidUpdate(prevProps){
-  //   const{start}=this.props
-  //   const status=(start>prevProps.start) ? 'better':'worse'
-  //   // this.props.c_room=new c_room;
 
-  // }
   // componentWillUnmount() {
 
   // }
@@ -69,10 +64,12 @@ class professorId_about extends Component {
       //console.log('response',response)
       //將資料傳給父元件
       th.getState()
+      //經由事件結尾再次呼叫API達到即時重新渲染
+      th.getOpClass()
     });
+    console.log('up')
 
-    //經由事件結尾再次呼叫API達到即時重新渲染
-    this.getOpClass()
+
   }
 
 

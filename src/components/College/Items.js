@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { totalmem } from 'os';
+//import { totalmem } from 'os';
 
 class Items extends Component {
   constructor(props) {
@@ -26,8 +26,8 @@ class Items extends Component {
                 <Link to={`/openclass/${items.cs_id}`} className=" ellen_hidbox product-image">
                   <img className="pic-1 ellen_classbox" src={`/images/${items.c_img1} `} />
                 </Link>
-                <ul className="social ">
-                  <li><a href="" onClick={this.checkHandler} data-tip="加入收藏"><i className="fas fa-bookmark"></i></a></li>
+                <ul className="social yuru-social-position  ">
+                  <li><a  className="mr-4" href="" onClick={this.checkHandler} data-tip="加入收藏"><i className="fas fa-bookmark "></i></a></li>
                   <li><a href="" onClick={this.addHandler} data-tip="加入購物車"><i className="fa fa-shopping-cart"></i></a></li>
                 </ul>
                 <div className="product-discount-label "><img src={`/images/${items.img_url} `} /></div>

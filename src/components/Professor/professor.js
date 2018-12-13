@@ -7,13 +7,14 @@ import { Link } from 'react-router-dom';
 
 
 
+
 class professor extends Component {
   constructor(props) {
     super(props)
     this.state = {
       id: this.props.match.params.id,
       professor: {},
-      teacher: false,//true  使用者是否為講師本人的按鈕顯示
+      teacher: true,//false  使用者是否為講師本人的按鈕顯示
       myclsnb:{},
       showV:true,
       th:this,
@@ -26,7 +27,8 @@ class professor extends Component {
     this.getNumber()
     console.log('id', this.state.id)
     console.log(this.props.match.params.id)
-    
+    var user = JSON.parse(localStorage.getItem("member"));
+    console.log(user)
   }
   updateShowV(th,e){
     const showStutas = !th.state.showV
@@ -67,7 +69,7 @@ class professor extends Component {
     let myclsnb = this.state.myclsnb;
     return (
       <React.Fragment>
-        <div className="container">
+        <div className="container ">
           <div className="row">
 
             <div className="col-md-3 mt-5">
@@ -85,7 +87,7 @@ class professor extends Component {
                   </div>
                   <h4 className="mt-3 mb-3">我的專長</h4>
                   <h6 className="mt-1 mb-1">{items.link_name}</h6>
-                  <div className="col mt-4" style={{ display: this.state.teacher ? 'none' : 'block' }}>
+                  <div className="col mt-4" style={{ display: this.state.teacher ? 'block': 'none'}}>
                     {/* <div className="col mt-4" style={{ display: 'none'}}> */}
                     <input type="submit" className="profile-edit-btn text-w" name="btnAddMore" value="修改履歷" />
                   </div>
@@ -103,10 +105,10 @@ class professor extends Component {
 
                   </div>
                   <div className="col mt-4">
-                    <button className="btn profile-edit-btn text-w" onClick={this.updateShowV.bind(this,this.state.th)} style={{ display: this.state.teacher ? 'none' : 'block' }} >{this.state.showV?'課程狀態':'返回關於講師 '}</button>
+                    <button className="btn profile-edit-btn text-w" onClick={this.updateShowV.bind(this,this.state.th)} style={{ display: this.state.teacher ?  'block': 'none' }} >{this.state.showV?'課程狀態':'返回關於講師 '}</button>
                   </div>
                   <div className="col mt-4">
-                    <Link to={`/class_from/${items.user_id}`}><button className="btn profile-edit-btn text-w" style={{ display: this.state.teacher ? 'none' : 'block' }} >我要開課</button></Link>
+                    <Link to={`/class_from/${items.user_id}`}><button className="btn profile-edit-btn text-w" style={{ display: this.state.teacher ? 'block': 'none' }} >我要開課</button></Link>
                   </div>
                 </div>
               </div>

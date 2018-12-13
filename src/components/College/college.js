@@ -76,7 +76,7 @@ class college extends Component {
         return (
             <React.Fragment>
                 <div className="container ">
-                    <div className="row d-flex justify-content-end bg-s p-2 myMOUSE" onClick={this.toggle}>
+                    <div className="row d-flex justify-content-end bg-s p-2 myMOUSE yuru-antd-slider" onClick={this.toggle}>
                         <h5 className="mr-2">進階篩選</h5>
                         <i className="ellen-fas fas fa-angle-down"></i>
                     </div>

@@ -36,7 +36,7 @@ class allprofessor extends Component {
             <React.Fragment>
                 <div className="container">
 
-                    <h2 className="mt-5">講師資群</h2>
+                    <h2 className="mt-5 text-f">講師資群</h2>
                     <div className="row">
 
                         {this.state.professor.map(professor =>

@@ -1,0 +1,42 @@
+*{
+    text-decoration:none;
+
+}
+.caBar{
+    color:#000;
+    background-color: #dbf3e5;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.caWhitebox{
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    border: 1px solid 
+
+}
+.caDeletebox{
+    background-color:#ed859b;
+    color:#fff;
+    text-align: center;
+    line-height: 2em;
+}
+
+.catabs li .nav-link{
+    background-color: #6eb7bb !important; 
+    color:white;
+}
+.catabs li .nav-link:hover{
+    background-color: #dbf3ef !important; 
+    color:#000;
+
+}
+.catabs li .caactive{
+    background-color: #dbf3ef !important; 
+    color:#000;
+
+}
+.catabs li .nav-link:focus{
+    background-color: #ebf7f7 !important; 
+}

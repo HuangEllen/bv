@@ -1,0 +1,129 @@
+$primary-color:#6eb7bb;
+$primaryhover-color:#84d1d1;
+$second1-color:#dbf3e5;
+$second2-color:#ebf7f7;
+$delet-color:#ed859b;
+$reply-color:#fbb03b;
+$btn-radius:0;
+$btn-h:40px;
+$btn-w:150px;
+$card-h:300px;
+$fig-h:150px;
+$line-h:32px;
+
+.changetoinline{
+  display: inline-block;
+}
+.color-back{
+  background-color: $second1-color;
+}
+.lilibtn {
+  width: $btn-w;
+  height: $btn-h;
+  margin: 15px;
+  padding-top: 8px;
+}
+.r-btn{
+  background: $delet-color;
+  color:white;
+ }
+ .g-btn{
+  background: $primary-color;
+  color:white;
+ }
+ .o-btn{
+  background:  $second1-color;
+  color:black;
+  cursor: pointer;
+ }
+//  form-control
+.formbc-color{
+  background:$primary-color; 
+}
+.formbc-color:focus {
+  color:black;
+  background-color:$primary-color;
+  border-color:$primary-color;
+}
+
+.line-h{
+  line-height: $line-h;
+}
+.card-h{
+  height: $card-h;
+}
+.fig-h{
+  height:$fig-h;
+}
+.pic-h{
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*----------------------dropdown-submenu---------------------*/
+/* 將子選單加入+號 */
+// li.dropdown-submenu>a:after{
+//   display:block;
+//   content:"+";
+//   float:right;
+//   font-size: 15px;
+//   margin-top:-1px;
+//   margin-left:5px;
+//   border: solid 1px #ccc;
+//   padding:0 4px;
+//   border-radius: 3px;
+// }
+/* 選單開啟時變- */
+// li.dropdown-submenu.open>a:after{
+//   content:"-";
+// }
+li.open ul.dropdown-menu>li.open>ul.dropdown-menu{
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+li.open ul.dropdown-menu>li.open>ul.dropdown-menu>li{
+  padding-left: 20px;
+}
+ 
+/* 滑入選單時變換底色 */  .dropdown-menu>li>a:focus, 
+  .dropdown-menu>li>a:hover {
+    background: rgba(0,0,0,0.1) !important;
+}
