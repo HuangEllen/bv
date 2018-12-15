@@ -14,6 +14,7 @@ $tx-h:#ffffff;
 
 body{
     padding-top: 7rem;
+    font-size: 16px;
 }
 @media (max-width: 991px) {
     body{
@@ -89,6 +90,9 @@ h2{
 .pl0{
     padding-left: 5rem;
     padding-right: 5rem;
+}
+a:hover{
+    color:#ffffff;
 }
 //-----------------------!Loing------------------------------------
 
@@ -167,6 +171,13 @@ h2{
 }
 .navbar_h{
     padding:1rem 0;
+}
+//------------------------!Mabers--------------------------------------
+.table {
+    tbody,thead,th,td{
+    border:0 !important;   
+    }
+    
 }
 
 // ----------------------!!SubMail------------------------------------

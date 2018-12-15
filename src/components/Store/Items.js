@@ -41,7 +41,7 @@ class Items extends Component {
             <React.Fragment>
                  {this.props.items.map(items =>
 
-                    <div className="col-md-3" key={items.idx}>
+                    <div className="col-md-3" key={items.product_id}>
                         <div className="yuru-product-grid ">
                             <div className="d-flex justify-content-center align-items-center">
                                 <a href="#">
@@ -54,10 +54,10 @@ class Items extends Component {
                             </div>
                             <div className="product-content text-center">
                                 <h4 className="text-f f_w400">{items.productname}</h4>
-                                <h4 className="text-f">NTD {items.productprice}</h4>  
+                                <h4 className="text-f">NT {items.productprice}</h4>  
                             </div>
                             <div className="text-center">
-                            <Link to={(`/itemdetail02/${items.product_id}`)}> <button value={items.product_id} onClick={this.checkHandler}className="btn btn-yuru-check">查看商品</button></Link>
+                            <Link to={(`/itemdetail/${items.product_id}`)}> <button value={items.product_id} onClick={this.checkHandler}className="btn btn-yuru-check">查看商品</button></Link>
                             </div>
                         </div>
                     </div> 

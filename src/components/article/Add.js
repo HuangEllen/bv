@@ -144,12 +144,12 @@ class Add extends Component {
                     
                     <div className="col-lg-2">
                         <label htmlFor="age" className="">年齡</label>
-                        <input type="number" value={this.state.age} onChange={this.handleChange} className="form-control border-radius0" id="age" placeholder="25" defaultValue="25"/>
+                        <input type="number" value={this.state.age} onChange={this.handleChange} className="form-control border-radius0" id="age" placeholder="25" />
                     </div>
 
                     <div className="col-lg-1">
                         <label className="" htmlFor="pre_title">性別</label>
-                        <select id="gender" value={this.state.gender} onChange={this.handleChange} name="gender" className="form-control border-radius0" defaultValue="女性">
+                        <select id="gender" value={this.state.gender} onChange={this.handleChange} name="gender" className="form-control border-radius0" >
                             <option value="女性">女性</option>
                             <option value="男性">男性</option>
                         </select>

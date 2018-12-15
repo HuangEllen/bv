@@ -46,6 +46,7 @@ class class_from extends Component {
     }
     //點擊按钮後的事件處理
     add = (evt) => {
+        const th = this
         const {
             user_id,
             c_category,
@@ -81,7 +82,10 @@ class class_from extends Component {
             body: formData,
         }).then(res => res.json())
             .then(data => {
-                alert(data.message);
+                console.log(data.message);
+                alert("恭喜您完成開課申請");
+                evt.preventDefault();
+                window.location.href = "/professor/"+th.state.id;
             })
         evt.preventDefault();
     }
@@ -128,11 +132,11 @@ class class_from extends Component {
             <React.Fragment>
                 <div className="container">
                     <form method="POST">
-                        <h2 className="mt-5 txt_mes">我要開課</h2>
+                        <h2 className="mt-4 txt_mes">我要開課</h2>
                         <div className="row mt-3 d-flex justify-content-center">
                             您好
                             <h4 className="text-f ml-3 mr-3">{items.teacher_name}</h4>
-                            講師 請填寫下列資料
+                            講師 請填寫下列開課所需資訊
                             </div>
                         <div className="row d-flex">
                             <div className="form-group col-md-8 text-left ellen_form ">
@@ -290,7 +294,7 @@ class class_from extends Component {
                     <div className="d-flex justify-content-center">
                         <Link to={`/professor/${items.user_id}`}
                             id="resetB" className="btn bg_mes text-w col-5 ml-3 mr-3">取消申請</Link >
-                        <button type="button" onClick={this.add} className="btn  bg_er-r text-w col-5 ml-3 mr-3">確認送出</button>
+                        <button type="button" onClick={this.add} className="btn  bg_er-r text-w col-5 ml-3 mr-3">確認送出</button >
                     </div>
                 </div>
 

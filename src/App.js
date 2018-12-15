@@ -14,6 +14,7 @@ import Professor from './components/Professor/professor';
 import AllProfessor from './components/Professor/allProfessor';
 import OpenClass from './components/OpenClass/openClass';
 import ClassFrom from './components/InOpenClass/class_from';
+import Disclaimer from './components/InOpenClass/Disclaimer';
 import ClassPutFrom from './components/InOpenClass/class_putfrom';
 import SubMail from './components/footer/submeil';
 //
@@ -49,6 +50,7 @@ class App extends Component {
             <Route exact path ='/professor' component={AllProfessor}/>
             <Route path ='/professor/:id' component={Professor}/>
             <Route path ='/class_from/:id' component={ClassFrom}/>
+            <Route path ='/Disclaimer/:id' component={Disclaimer}/>
             <Route path ='/class_from//put/:id' component={ClassPutFrom}/>
             {/*  */}
             <Route path='/store' component={Store} />

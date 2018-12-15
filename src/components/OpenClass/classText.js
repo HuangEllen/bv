@@ -21,7 +21,7 @@ class classText extends Component {
             <div>
               <Quantity />
             </div>
-            <h3 className="review-no mt-3">報名餘額： {items.total_pop ? items.total_pop : items.c_people} 人</h3>
+            <h3 className="review-no mt-3 txt_er-r">剩餘名額： {items.total_pop ? items.total_pop : items.c_people} 人</h3>
             <div className="action mt-3">
               <button className="btn col-11 bg-first text-w " type="button">放入購物車</button>
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './allprofessor.scss';
 import ProfessorIdAbout from './professorId_about';
 import { Link } from 'react-router-dom';
-
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 
 
@@ -25,10 +25,18 @@ class professor extends Component {
     //ajax call
     this.getClass()
     this.getNumber()
-    console.log('id', this.state.id)
-    console.log(this.props.match.params.id)
-    var user = JSON.parse(localStorage.getItem("member"));
-    console.log(user)
+    //console.log('id', this.state.id)
+    //console.log(this.props.match.params.id)
+    let id = this.props.match.params.id
+    let user = JSON.parse(localStorage.getItem("member"));
+    let userid = user[0].id;
+    if(id == userid){
+      this.setState({teacher: true})
+      }else{
+        this.setState({teacher: false})
+      }
+    console.log(id)
+    console.log(userid)
   }
   updateShowV(th,e){
     const showStutas = !th.state.showV
@@ -108,7 +116,7 @@ class professor extends Component {
                     <button className="btn profile-edit-btn text-w" onClick={this.updateShowV.bind(this,this.state.th)} style={{ display: this.state.teacher ?  'block': 'none' }} >{this.state.showV?'課程狀態':'返回關於講師 '}</button>
                   </div>
                   <div className="col mt-4">
-                    <Link to={`/class_from/${items.user_id}`}><button className="btn profile-edit-btn text-w" style={{ display: this.state.teacher ? 'block': 'none' }} >我要開課</button></Link>
+                    <Link to={`/Disclaimer/${items.user_id}`}><button className="btn profile-edit-btn text-w" style={{ display: this.state.teacher ? 'block': 'none' }} >我要開課</button></Link>
                   </div>
                 </div>
               </div>

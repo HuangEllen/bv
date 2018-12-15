@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 
-export default class linkclass extends React.Component {
+export default class linkclass extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -74,9 +75,9 @@ export default class linkclass extends React.Component {
 
               <div className="col-sm  mb-2 mt-5" key={c_room.idx}>
                 <div className=" product-new-label">
-                  <a href="#">
+                  <Link to={`/professor/${c_room.user_id}`}>
                     <img className="ellen-teach-p1" src={`/images/${c_room.img} `} />
-                  </a>
+                  </Link>
                 </div>
                 <div className="product-grid ">
                   <div className="product-image">

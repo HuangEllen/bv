@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Switch , Route, Link } from "react-router-dom";
 import Add from './Add';
 import My from './My';
 import Detail from './Detail';
@@ -46,7 +46,7 @@ class Article extends Component {
                             
 
                     </div>
-                    <switch>
+                    <Switch>
                     {/* http://localhost:3000/article/articlelist */}
                     <Route exact path={`${this.props.match.path}/articlelist`} component={Articlelist} /> 
                     {/* http://localhost:3000/bv/article/articlelist/*/}
@@ -58,7 +58,7 @@ class Article extends Component {
                     <Route path={`${this.props.match.path}/add`} component={Add} />
                     {/* http://localhost:3000/article/detail */}
                     <Route exact path={`${this.props.match.path}/articlelist/detail/:id`} component={Detail} />         
-                    </switch>     
+                    </Switch>     
                 </div>     
         </React.Fragment>
         )

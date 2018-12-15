@@ -9,7 +9,7 @@ var isLogin = JSON.parse(localStorage.getItem("isLogin"))
 
 class nav extends Component {
     chkLogin = () => {
-        if (isLogin == false) {
+        if (isLogin != true) {
             alert("請先登入");
             window.location.href = "http://localhost:3001/Login";
 

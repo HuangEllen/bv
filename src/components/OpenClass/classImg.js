@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class classImg extends Component {
-
+//   constructor(props) {
+//     super(props)
+//   }
+//   componentDidUpdate() {
+//         $('#ch img').click(function(){
+//             $('#xzoom-default img').attr("src",$(this).attr('src'));
+//             return false;
+//     });
+// }
   render() {
     let items = this.props.items;
     return (
@@ -16,10 +24,10 @@ class classImg extends Component {
                 width="500"
                 src={`/images/${items.c_img1} `} />
               <div className="xzoom-thumbs mt-3">
-                <a href="#">
+                <a id="ch" href="#">
                   <img className="xzoom-gallery" width="80" src={`/images/${items.c_img1} `} title="課程照片" /></a>
 
-                <a href="#">
+                <a id="ch" href="#">
                   <img className="xzoom-gallery" width="80" style={{ display: items.c_img2 ? '' : 'none' }} src={`/images/${items.c_img2} `} title="課程照片" /></a>
 
               </div>

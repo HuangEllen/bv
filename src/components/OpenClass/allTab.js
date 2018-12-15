@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-
+import { Link } from 'react-router-dom';
 
 class allTab extends Component {
   // constructor(props) {
@@ -84,9 +84,9 @@ class allTab extends Component {
 
               <div className="d-flex justify-content-center mt-4">
                 <div className="col-6 d-flex flex-column align-items-center">
-                  <div className="ellen_hidbox1 ">
+                  <Link to={`/professor/${items.user_id}`} className="ellen_hidbox1 ">
                     <img src={`/images/${croom.user_img} `} alt="" />
-                  </div>
+                  </Link>
                   <h3 className="mt-4 mb-3">{croom.teacher_name}</h3>
                 </div>
                 <div className="col-6 d-flex flex-column justify-content-center">
@@ -99,9 +99,9 @@ class allTab extends Component {
               <h3 className=" mt-3">使用產品</h3>
               <div className="d-flex justify-content-center mt-4">
                 <div className="col-6 d-flex flex-column align-items-center">
-                  <div className="ellen_hidbox3 ">
+                  <Link to={(`/itemdetail/${croom.prodid}`)} className="ellen_hidbox3 ">
                     <img src={`/images/${croom.img} `} alt="" />
-                  </div>
+                  </Link>
                   <h3 className="mt-4 mb-3">{croom.name}</h3>
                 </div>
                 <div className="col-6 d-flex flex-column justify-content-center">

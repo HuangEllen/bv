@@ -36,7 +36,7 @@ class Items extends Component {
                 <h4 className="text-f f_w400">{items.c_title}</h4>
 
                 <div className="d-flex justify-content-between ">
-                  <p className="ellen-p ">可報名人數:{items.total_pop ? items.total_pop : items.c_people}</p>
+                  <p className="ellen-p ">剩餘名額:{items.total_pop ? items.total_pop : items.c_people}</p>
                   <p className="ellen-p ">類型:{items.link_name}</p>
                 </div>
                 <div className="d-flex justify-content-between ">

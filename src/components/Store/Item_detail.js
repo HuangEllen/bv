@@ -87,7 +87,7 @@ class Item_detail extends Component {
                 <Classification/>
                      {
                          this.state.item.map(item =>
-                            <div>
+                            <div key={item.product_id}>
                                 <div  className="mt-5">
                                     <div className="wrapper row d-flex justify-content-around">
                                         <div className="col-4 mt-5">
@@ -105,7 +105,7 @@ class Item_detail extends Component {
                                         </section>
                                         <div className="details col d-flex flex-column justify-content-center mr-3">
                                             <div className="card ellen_menue p-4">
-                                                <h3 className="product-title mt-2">NTD {item.productprice}</h3>
+                                                <h3 className="product-title mt-2">NT {item.productprice}</h3>
                                                 <p className="ellen-p ">{item.specification} mL</p>
                                             <div>
                                                 <Quantity qtyChange={this.qtyChange}/>                        
@@ -148,20 +148,20 @@ class Item_detail extends Component {
                     </div>
              
                     )}
-                    <div class="modal" id="AddCart1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">  
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div className="modal" id="AddCart1" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div className="modal-dialog modal-dialog-centered" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">  
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
                                成功加入購物車
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">確定</button>
-                               <button type="button" class="btn yuru-btn-cart text-white"  >結帳</button>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" data-dismiss="modal">確定</button>
+                               <button type="button" className="btn yuru-btn-cart text-white"  >結帳</button>
                             </div>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from "react-router-dom";
+import { Route, Link ,Switch } from "react-router-dom";
 
 import './MemberCenter.css';
 
@@ -79,14 +79,14 @@ class MemberCenter extends Component {
 
 
                 {/* <hr /> */}
-                <switch>
+                <Switch>
                     {/* http://localhost:3000/about/Member */}
                     <Route exact path={`${this.props.match.path}/Member`} component={Member} />
                     <Route exact path={`${this.props.match.path}/MemberOrder`} component={MemberOrder} />
                     <Route exact path={`${this.props.match.path}/MemberRecord`} component={MemberRecord} />
 
 
-                </switch>
+                </Switch>
             </React.Fragment>
 
         );

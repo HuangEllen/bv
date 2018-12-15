@@ -1,16 +1,16 @@
 .caTable{
     background-color:#dbf3ef;
 
-    overflow: scroll-x;
+    /* overflow: scroll-x; */
     padding: 20px;
 }
 .caMainbox{
     background-color:#dbf3ef;
-    overflow: scroll-x;
+    /* overflow: scroll-x; */
 
 /* height: 400px; */
 }
 .caTable th,.caTable td{
-    display: block;
+    /* display: block; */
     height: 3rem;
 }
