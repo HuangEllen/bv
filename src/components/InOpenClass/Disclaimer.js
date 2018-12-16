@@ -77,11 +77,11 @@ class Disclaimer extends Component {
           </div>
           <div className="d-flex justify-content-center mt-4">
                 <Link to={`/professor/${items.user_id}`}
-                  id="resetB" className="btn bg_mes text-w col-5 ml-3 mr-3">
+                  id="resetB" className="btn bg_er-r text-w col-5 ml-3 mr-3">
                   不同意</Link >
 
                 <Link to={`/class_from/${items.user_id}`}
-                  className="btn bg_er-r text-w col-5 ml-3 mr-3">
+                  className="btn bg_mes  text-w col-5 ml-3 mr-3">
                   同意</Link>
               </div>
         </div>

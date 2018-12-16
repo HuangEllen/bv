@@ -31,7 +31,7 @@ class my_joinclass extends React.Component {
                 
                     {this.state.c_room.map(c_room =>
 
-                        <div className="col-md-6  mb-5 mt-5" key={c_room.c_id}>
+                        <div className="col-md-6  mb-5 mt-5" key={c_room.cs_id}>
                             <div className=" product-new-label">
                                 <Link to={`/professor/${c_room.user_id}`}>
                                     <img className="ellen-teach-p1" src={`/images/${c_room.teacher_img} `} />
@@ -39,11 +39,11 @@ class my_joinclass extends React.Component {
                             </div>
                             <div className="product-grid ">
                                 <div className="product-image">
-                                    <Link to={`/openclass/${c_room.idx}`} className=" ellen_hidbox product-image">
+                                    <Link to={`/openclass/${c_room.cs_id}`} className=" ellen_hidbox product-image">
                                         <img className="pic-1 ellen_classbox" src={`/images/${c_room.c_img1} `} />
                                     </Link>
                                     <ul className="social ">
-                                        <li><a href="" onClick={this.checkHandler} data-tip="加入收藏"><i className="fas fa-bookmark"></i></a></li>
+                                        <li className='mr-4'><a href="" onClick={this.checkHandler} data-tip="加入收藏"><i className="fas fa-bookmark"></i></a></li>
                                         <li><a href="" onClick={this.addHandler} data-tip="加入購物車"><i className="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                     <div className="product-discount-label "><img src={`/images/${c_room.img_url} `} /></div>

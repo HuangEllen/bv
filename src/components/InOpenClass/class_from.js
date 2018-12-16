@@ -9,6 +9,7 @@ class class_from extends Component {
         this.initState = {
             // id:null,
             user_id: this.props.match.params.id,
+            cs_id:50,
             c_category: "",
             c_title: "",
             c_address: "",
@@ -49,6 +50,7 @@ class class_from extends Component {
         const th = this
         const {
             user_id,
+            cs_id,
             c_category,
             c_title,
             c_address,
@@ -64,6 +66,7 @@ class class_from extends Component {
         } = this.state;
         let formData = new FormData();
         formData.append("user_id", user_id);
+        formData.append("cs_id", cs_id);
         formData.append("c_category", c_category);
         formData.append("c_title", c_title);
         formData.append("c_address", c_address);
@@ -293,8 +296,8 @@ class class_from extends Component {
                     </form>
                     <div className="d-flex justify-content-center">
                         <Link to={`/professor/${items.user_id}`}
-                            id="resetB" className="btn bg_mes text-w col-5 ml-3 mr-3">取消申請</Link >
-                        <button type="button" onClick={this.add} className="btn  bg_er-r text-w col-5 ml-3 mr-3">確認送出</button >
+                            id="resetB" className="btn  bg_er-r text-w col-5 ml-3 mr-3">取消申請</Link >
+                        <button type="button" onClick={this.add} className="btn  bg_mes text-w col-5 ml-3 mr-3">確認送出</button >
                     </div>
                 </div>
 

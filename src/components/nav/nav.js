@@ -45,7 +45,8 @@ class nav extends Component {
                                 <a className="nav-link dropdown-toggle" href="College" id="navdrop" role="button" data-toggle="dropdown"
                                     data-hover="dropdown">教育學苑</a>
                                 <div className="dropdown-menu" aria-labelledby="navdrop">
-                                    <Link to="/College" className="dropdown-item">課程總攬</Link>
+                                    <Link to="/College" className="dropdown-item">課程總覽</Link>
+                                    <a href="#" className="dropdown-item">講師申請</a>
                                     <a href="#" className="dropdown-item">我要開課</a>
                                     <Link to="/Professor" className="dropdown-item">講師資群</Link>
                                 </div>

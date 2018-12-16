@@ -10,6 +10,13 @@
 
 /* height: 400px; */
 }
+.caMainbox_edit{
+    background-color:#dbf3ef;
+    padding: 2rem;
+    /* overflow: scroll-x; */
+
+/* height: 400px; */
+}
 .caTable th,.caTable td{
     /* display: block; */
     height: 3rem;

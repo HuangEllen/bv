@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './allprofessor.scss';
 import ProfessorIdAbout from './professorId_about';
 import { Link } from 'react-router-dom';
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
-
 
 
 
@@ -28,14 +26,15 @@ class professor extends Component {
     //console.log('id', this.state.id)
     //console.log(this.props.match.params.id)
     let id = this.props.match.params.id
+    var isLogin = JSON.parse(localStorage.getItem("isLogin", false))
     let user = JSON.parse(localStorage.getItem("member"));
     let userid = user[0].id;
-    if(id == userid){
+    if(id == userid && isLogin){
       this.setState({teacher: true})
       }else{
         this.setState({teacher: false})
       }
-    console.log(id)
+    console.log(isLogin)
     console.log(userid)
   }
   updateShowV(th,e){

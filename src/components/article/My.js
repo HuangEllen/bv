@@ -9,8 +9,10 @@ class My extends Component{
         this.handleChange = this.handleChange.bind(this)
         console.log(this.state);
         }  
-    handleChange() { 
-        fetch("http://localhost:3000/bv/article/my/" + this.props.match.params.usid)
+    handleChange() {
+        var b = JSON.parse(localStorage.getItem("member"));
+        fetch("http://localhost:3000/bv/article/my/" +b[0].id)
+        // fetch("http://localhost:3000/bv/article/my/" + this.props.match.params.usid)
         .then(res => res.json())
         .then(articles =>
             this.setState({article:articles,a:articles[0]}

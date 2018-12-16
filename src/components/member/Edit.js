@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import './Show.css';
 var a = JSON.parse(localStorage.getItem("member"));
+
 
 class Edit extends Component {
     constructor(props) {
@@ -179,8 +181,8 @@ class Edit extends Component {
 
         return (
             <React.Fragment>
-                <div className="container">
-                    <h2>修改會員資料</h2>
+                <div className="caMainbox_edit container">
+                    <h3 className="">修改會員資料</h3>
                     <form id='form01'>
                         {/* <form id='form01' action=" http://localhost:3000/api/members" method="POST"> */}
                         {/* <div className="form-group">

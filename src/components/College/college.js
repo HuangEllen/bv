@@ -46,20 +46,22 @@ class college extends Component {
         fetch("/allcategory/slider_page/"+id )  //http://localhost:3000/allcategory/slider_page
             .then(res => res.json())
             .then(c_room => {
-                console.log(c_room)
+                // console.log(c_room)
                 console.log(this.id)
                 // console.log(this.props.match.params.c_category);
                 this.setState({
                     c_room: c_room,
                     // category: ''
                 })
+                this.getTotal()
             })
+            this.getTotal()
     }
     getTotal() {
         fetch('/allcategory/category_page')  //http://localhost:3000/allcategory/category_page
             .then(res => { res.json() })
             .then(total => {
-                console.log(total)
+                // console.log(total)
                 this.setState({
                     total: total
                 })
@@ -89,8 +91,8 @@ class college extends Component {
                             <div className="d-flex  row ellen-boxh  col mt-2 ellen-bt flex-column align-items-start">
                                 <a href="#" onClick={() => this.getClass(1)}> <p className=" mr-3 ellen-p"   >證照課程</p> </a>
                                 <a href="#" onClick={() => this.getClass(2)}> <p className=" mr-3 ellen-p"  >護膚技術課程</p> </a>
-                                <a href="#" onClick={() => this.getClass(3)}> <p className=" mr-3 ellen-p"  >保養技術課程</p> </a>
-                                <a href="#" onClick={() => this.getClass(4)}> <p className=" mr-3 ellen-p"  >專業技術課程</p> </a>
+                                <a href="#" onClick={() => this.getClass(3)}> <p className=" mr-3 ellen-p"  >專業技術課程</p> </a>
+                                <a href="#" onClick={() => this.getClass(4)}> <p className=" mr-3 ellen-p"  >保養技術課程</p> </a>
                                 <a href="#" onClick={() => this.getClass(5)}> <p className=" mr-3 ellen-p"  >企業講座</p> </a>
                             </div>
                         </div>

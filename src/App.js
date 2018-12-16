@@ -23,11 +23,13 @@ import Cart from "./components/Cart/Cart";
 import Item_detail from "./components/Store/Item_detail";
 import Paydeliver from "./components/Cart/Paydeliver"
 import Payinformation from "./components/Cart/Payinformation"
+import Order from "./components/Cart/Order"
 import Finish from "./components/Cart/Finish"
 import Member from './components/member/Member';
 import Register2 from './components/member/Register2';
 import MemberCenter from './components/member/MemberCenter';
 import Login from './components/member/Login';
+import Edit from './components/member/Edit';
 import Article from './components/article/Article';
 
 
@@ -59,11 +61,14 @@ class App extends Component {
             <Route path="/register2" component={Register2} />
             <Route path="/MemberCenter" component={MemberCenter} />
             <Route path="/cart" component={Cart} />
+            <Route exact path="/itemdetail/" component={Item_detail} />
             <Route path="/itemdetail/:id" component={Item_detail} />
             <Route path="/Paydeliver" component={Paydeliver}/>
             <Route path="/Payinformation" component={Payinformation}/>
             <Route path="/Finish" component={Finish}/>
             <Route path="/article" component={Article} />
+            <Route path="/MemberCenter/Edit" component={Edit} />
+            <Route path="/Order" component={Order} />
             
           </div>
 

@@ -113,7 +113,7 @@ class professorId_about extends Component {
             </div>
             <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
               <div className="row d-flex flex-column align-items-center">
-                <h3 className="text-f">上架中</h3>
+                <h3 className="text-f">開課中</h3>
                 <div className="row justify-content-between pl0">
 
                   {this.state.c_room.map(c_room =>
@@ -130,7 +130,7 @@ class professorId_about extends Component {
                             <img className="pic-1 ellen_classbox" src={`/images/${c_room.c_img1} `} />
                           </Link>
                           <ul className="social ">
-                            <li><a href="" onClick={this.checkHandler} data-tip="加入收藏"><i className="fas fa-bookmark"></i></a></li>
+                            <li className='mr-4'><a href="" onClick={this.checkHandler} data-tip="加入收藏"><i className="fas fa-bookmark"></i></a></li>
                             <li><a href="" onClick={this.addHandler} data-tip="加入購物車"><i className="fa fa-shopping-cart"></i></a></li>
                           </ul>
                           <div className="product-discount-label "><img src={`/images/${c_room.img_url} `} /></div>
@@ -152,7 +152,7 @@ class professorId_about extends Component {
 
                   )}
                 </div>
-                <h3 className="text-f">已參加</h3>
+                <h3 className="text-f">參加過</h3>
                 <div className="row justify-content-between pl0">
 
                   <MyJoinClass

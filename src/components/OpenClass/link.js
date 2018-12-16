@@ -85,7 +85,7 @@ export default class linkclass extends Component {
                       <img className="pic-1 ellen_classbox" src={`/images/${c_room.c_img1} `} />
                     </a>
                     <ul className="social ">
-                      <li className=''><a href="" onClick={this.checkHandler} data-tip="加入收藏"><i className="fas fa-bookmark"></i></a></li>
+                      <li className='mr-4'><a href="" onClick={this.checkHandler} data-tip="加入收藏"><i className="fas fa-bookmark"></i></a></li>
                       <li className=''><a href="" onClick={this.addHandler} data-tip="加入購物車"><i className="fa fa-shopping-cart "></i></a></li>
                     </ul>
                     <div className="product-discount-label "><img src={`/images/${c_room.img_url} `} /></div>

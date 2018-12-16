@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import $ from 'jquery';
-
+//連動的選單
 class Paydeliver extends Component {
     constructor(props) {
         super(props);
         this.state = {
-           userid: "",
-           deliverplace:"",
-           deliver:"",
-           pay:""            
+            userid: "",
+            orderid: "",
+            deliverplace: "Taipei",
+            deliver: "1",
+            pay: "信用卡"
         }
         this.changeHandler = this.changeHandler.bind(this);
         this.nextHandler = this.nextHandler.bind(this);
@@ -17,20 +18,28 @@ class Paydeliver extends Component {
     changeHandler(evt) {
         let key = evt.target.id;
         let value = evt.target.value;
+        console.log(value)
         this.setState({
-            [key]:value
+            [key]: value
+        }, function () {
+            console.log("changeHandler callback")
         })
     }
     nextHandler(evt) {
-         fetch('http://localhost:3000/deliver/order', {
+        console.log("get in nextHandler")
+        console.log(JSON.stringify(this.state));
+        fetch('http://localhost:3000/deliver/order', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(this.state),
-        })  
+        })
+            .then(res => console.log("handler status" + res.status))
+
     }
     render() {
+        console.log("render!!")
         return (
             <div className="container">
                 <div>
@@ -52,19 +61,20 @@ class Paydeliver extends Component {
                                     <div className="form-group text-left">
                                         <label htmlFor="place">送貨地點</label>
                                         <select id="deliverplace" value={this.state.deliverplace} onChange={this.changeHandler} name="deliverplace" className="form-control">
-                                            <option value="Taiwan">台灣</option>
-                                            <option value="Singapore">新加坡</option>
-                                            <option value="JAPAN">日本</option>
+                                            <option value="Taipei">台北</option>
+                                            <option value="Taichung">台中</option>
+                                            <option value="ISLAND">海島(金門/馬祖/澎湖)</option>
                                             <option value="Maylasia">馬來西亞</option>
                                         </select>
                                     </div>
                                     <div className="form-group text-left">
                                         <label htmlFor="deliver">送貨方式</label>
                                         <select id="deliver" value={this.state.deliver} onChange={this.changeHandler} name="deliver" className="form-control">
-                                            <option value="1" selected>超商取貨付款[推薦使用]</option>
+                                            <option value="1" defaultValue>超商取貨付款[推薦使用]</option>
                                             <option value="2">超商取貨不付款</option>
-                                            <option value="3">海島-郵局包裹(金門/馬祖/澎湖)</option>
-                                            <option value="4">海外-郵局包裹(台灣以外所有國家)</option>
+                                            <option value="3">宅急便</option>
+                                            <option value="4">海島-郵局包裹(金門/馬祖/澎湖)</option>
+                                            <option value="5">海外-郵局包裹(台灣以外所有國家)</option>
                                         </select>
                                     </div>
                                     <div className="form-group text-left">
@@ -86,32 +96,84 @@ class Paydeliver extends Component {
             </div>
         );
     }
-    componentDidMount(){
-       $("#deliver").change(function(){
-           switch(parseInt($(this).val())){
-               case 1:
-               $("#pay option").remove();
-               var array = ["全家貨到付款","7-11貨到付款"];
-               $.each(array, function(i, val){
-                   $("#pay").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-               });
-               break;
-               case 2:
-               $("#pay option").remove();
-               var array = ["信用卡","ATM"];
-               $.each(array, function(i, val){
-                $("#pay").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
-                
-               })
-               break;
-           }
-       })
-       var user = JSON.parse(localStorage.getItem("member"));
-       var userid = user[0].id;
-       this.setState({
-          userid:userid
-      })
+    componentDidMount() {
+        $("#deliver").change(function () {
+            switch (parseInt($(this).val())) {
+                case 1:
+                    $("#pay option").remove();
+                    var array = ["全家貨到付款", "7-11貨到付款"];
+                    $.each(array, function (i, val) {
+                        $("#pay").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
+                    });
+                    break;
+                case 2:
+                    $("#pay option").remove();
+                    var array = ["信用卡", "ATM"];
+                    $.each(array, function (i, val) {
+                        $("#pay").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
+
+                    })
+                    break;
+                case 3:
+                    $("#pay option").remove();
+                    var array = ["信用卡", "ATM"];
+                    $.each(array, function (i, val) {
+                        $("#pay").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
+
+                    })
+                    break;
+                case 4:
+                    $("#pay option").remove();
+                    var array = ["信用卡", "ATM"];
+                    $.each(array, function (i, val) {
+                        $("#pay").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
+
+                    })
+                    break;
+                case 5:
+                    $("#pay option").remove();
+                    var array = ["信用卡", "ATM"];
+                    $.each(array, function (i, val) {
+                        $("#pay").append($("<option value='" + array[i] + "'>" + array[i] + "</option>"));
+
+                    })
+                    break;
+            }
+        })
+        var user = JSON.parse(localStorage.getItem("member"));
+        var userid = user[0].id;
+        var num = getRandomNum(1, 10, 6);
+        function getRandomNum(Min, Max, length) {
+            var num = '';
+            for (var i = 0; i < length; i++) {
+                var Range = Max - Min;
+                var Rand = Math.random();
+                num += (Min + Math.round(Rand * Range)) + '';
+            }
+            return num;
+        }
+        this.setState({
+            userid: userid,
+            orderid: num
+        });
+        console.log('setitem before')
+        localStorage.setItem('orderid', num);
+        console.log('orderid')
+        console.log('setitem after')
     }
+
+    shouldComponentUpdate() {
+        return true;
+    }
+
+    componentWillUpdate() {
+        console.log("componentWillUpdate")
+    }
+
+    componentDidUpdate() {
+        console.log("componentDidUpdate")
+    }
+
 }
 
 export default Paydeliver;

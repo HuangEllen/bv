@@ -36,21 +36,20 @@ class MemberCenter extends Component {
     }
 
     render() {
+        var a = JSON.parse(localStorage.getItem("member"));
+
         return (
 
             <React.Fragment>
                 <div className="container">
-                    <h2 className="title text-f">會員中心</h2>
+                    <h2 className="title text-f mt-5">會員中心</h2>
                     <div className="caBar row">
-                        <div className="col-1">
-                            <div className="caWhitebox "></div>
-                        </div>
-                        <h4 className="caMembertitle col-8">一般會員</h4>
+                        <h4 className="caMembertitle col-9 text-left">會員狀態： {a[0].memberLevel==1? "一般會員" : "講師會員"}</h4>
                         <div className="col-3">
-                            <div className="caDeletebox ">修改密碼</div>
+                            <div className="caDeletebox myMOUSE">修改密碼</div>
                         </div>
                     </div>
-                    <div className="container">
+                    <div className="container mt-5">
                         <ul className="nav nav-tabs catabs" id="myTab" role="tablist">
                             <li className="nav-item ">
                                 <Link to={`${this.props.match.url}/Member`} style={{ textDecoration: 'none' }}><div className="nav-link caBtn caactive" >資訊管理</div></Link>

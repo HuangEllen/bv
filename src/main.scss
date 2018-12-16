@@ -72,6 +72,9 @@ h2{
 .bg_mes{
     background:$mes ;
 }
+.bg_xxx{
+    background: #dbf3ef;
+}
 .flex{
     display: flex;
 }
@@ -947,6 +950,19 @@ min-height: 10rem;
       width:50%;
   }
   
+  .yuru-product-content {
+    background-color: #fff;
+    text-align: left;
+    padding: 1rem 1rem;
+    // margin: 0 auto;
+    // position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -27px;
+    z-index: 1;
+    // min-height: 10rem;
+    
+}
 // ------itemdetail-----
 
 

@@ -151,41 +151,47 @@ class Articlelist extends Component {
             <React.Fragment>
             <div className="container">
                 <div className="row">
+                
                     {this.state.article.map(article =>
-                            <div key={article.id} className="col-12 col-sm-6 col-lg-3 mt-5">
+                            <div key={article.id} className="col-12 col-sm-6 col-lg-3 mt-5 mb-3">
                                 {/* style={{border:" 1px solid black"}} */}
                              
                                 <div className="card-h bordercolor ">
                                 
                                 <figure className="fig-h text-center">
                             
-                                <img className="pic-h " src = {(`/images/liliimg/pro_pic/${article.pro_picnum}`)} alt=""/>
+                                <img className="pic-h " src = {(`http://localhost:3000/bv/pro_pic/${article.pro_picnum}`)} alt=""/>
                                 {/* src = {require(`../../liliimages/${article.pro_picnum}.jpg`)} */}
                                 </figure>
-                                  
+                                    <div className="text-left">
                                     <h5 className=" d-inline-flex  textblack pl-2">[{article.pre_title}]</h5> 
                                     <h5 className="  d-inline-flex   textblack text-truncate">{article.title}</h5>
+                                    </div>
                                  
                                     <p className=" textblack text-truncate pl-2">{article.text}</p>
+                                    <div className="text-left">
                                     <p className=" textblack pl-2">類型：<a href="#" className="textblack">#{article.pro_type}</a>
                                         <a href="#" className=" textblack">#{article.pro_type}</a>
-                                    </p> 
+                                    </p>
+                                    </div> 
                                     {/* 星星變數亮燈燈*/}
+                                    <div className="text-left ml-2">
                                     <i className="far fa-star "></i> 
                                     <i className="far fa-star "></i>
                                     <i className="far fa-star "></i>
                                     <i className="far fa-star "></i>
                                     <i className="far fa-star "></i>
                                     <p className="d-inline-flex textblack">({article.star})</p>
+                                    </div> 
                                     {/* 星星變數亮燈燈*/}
                                     
                                         <div className="row justify-content-between">
-                                        <div className="col">
-                                        <i className="far fa-heart  textblack pl-2"/>
-                                        <p className="d-inline-flex  textblack pl-1">{article.collect}</p>
+                                        <div className="col text-left ml-2">
+                                        <i className="far fa-heart  textblack "/>
+                                        <p className="d-inline-flex  textblack ml-1">{article.collect}</p>
                                        
                                        
-                                        <i className="far fa-comment  textblack pl-1"/>
+                                        <i className="far fa-comment  textblack ml-2"/>
                                         <p className="d-inline-flex textblack ">{article.count}</p>
                                         </div>
                                        
@@ -200,10 +206,6 @@ class Articlelist extends Component {
                                  
                                 </div>
                                 </div>
-                              
-                                
-                           
-                            
                     )}
                     </div>
                     <nav aria-label="Page navigation example text-center" className="mt-5">

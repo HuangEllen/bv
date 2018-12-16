@@ -25,28 +25,25 @@ class Detail extends Component {
                 {/* <div className="container"> */}
                 {this.state.article.map(article =>
                 <div key={article.id}>
-                <div className="row mt-4">
+                <div className="row mt-4 ">
                     <div className="col">
-                    <h2 className="text-left d-inline-flex">{article.title}</h2>
+                    <h2 className="text-left d-inline-flex">{article.pre_title}</h2>
                     <h2 className="text-left d-inline-flex">{article.title}</h2>
                     </div>
                     {/* <div className="col text-right d-inline-flex lilibtn r-btn"> 
                         分享
                     </div> */}
                 </div>
-               
-                <div className="ie-separator w-100" role="presentation"></div>
-
-                <div className="article-meta col-lg-3">
+                {/* <div className="ie-separator w-100" role="presentation"></div> */}
+                <div className="row">
+                <div className="col-lg-3">
                     <div className="article-meta-author-portrait">
-                        <img src={(`/images/liliimg/u_pic/${article.u_pic}`)} alt="" />
+                        <img src={(`http://localhost:3000/bv/u_pic/${article.u_pic}`)} alt="" />
                     </div>
-                </div>
-                <div className="col-lg-9">  
-                    <div className="article-meta-author d-inline-flex mt-5 mb-2 mr-3">#{article.u_name}</div>
-                    <div className="article-meta-author d-inline-flex mt-5 mb-2 mr-3">#{article.pro_type}</div>
-                    <div className="article-meta-author d-inline-flex mt-5 mb-2 mr-3">{article.gender}</div>
-                    <div className="article-meta-author d-inline-flex mt-5 mb-2 mr-3">{article.age}歲</div>
+                    <div className="article-meta-author d-inline-flex  mr-3">{article.u_name}</div>
+                    <div className="article-meta-author d-inline-flex  mr-3">#{article.pro_type}</div>
+                    <div className="article-meta-author d-inline-flex   mr-3">{article.gender}</div>
+                    <div className="article-meta-author d-inline-flex  mr-3">{article.age}歲</div>
                     <div className="d-inline-flex mb-2"> flow</div><br/>
                     <i className="far fa-star mb-2"></i> 
                     <i className="far fa-star mb-2"></i>
@@ -56,7 +53,8 @@ class Detail extends Component {
                     <p className="d-inline-flex textblack mb-2">({article.star})</p>
                     <div className="d-inline-flex mb-2 ml-3 text-right">{article.created_at}</div>
                 </div>
-                {/* ---------------slider----------------- */}
+                <div className="col-lg-9">  
+                  {/* ---------------slider----------------- */} 
                 <div id="carouselExampleIndicators" className="carousel slide " data-ride="carousel" >
                     <ol className="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
@@ -65,13 +63,13 @@ class Detail extends Component {
                     </ol>
                     <div className="carousel-inner slide-h">
                         <div className="carousel-item active  text-center">
-                        <img className="  " src={(`/images/liliimg/pro_pic1/${article.art_pic1}`)} alt="First slide"/>
+                        <img className="  " src={(`http://localhost:3000/bv/art_pic/${article.art_pic1}`)} alt="First slide"/>
                         </div>
                         <div className="carousel-item text-center">
-                        <img className=" " src={(`/images/liliimg/art_pic2/${article.art_pic2}`)} alt="Second slide"/>
+                        <img className=" " src={(`http://localhost:3000/bv/art_pic/${article.art_pic2}`)} alt="Second slide"/>
                         </div>
                         <div className="carousel-item text-center">
-                        <img className=" " src={(`/images/liliimg/art_pic3/${article.art_pic2}`)} alt="Third slide"/>
+                        <img className=" " src={(`http://localhost:3000/bv/art_pic/${article.art_pic2}`)} alt="Third slide"/>
                         </div>
                     </div>
                     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -83,6 +81,8 @@ class Detail extends Component {
                         <span className="sr-only">Next</span>
                     </a>
                 </div>
+                </div>
+                </div>
                 {/* ----------------文字輸入區-------------- */}
                 <p>{article.text}</p>               
                 </div>
@@ -92,5 +92,4 @@ class Detail extends Component {
         )
     }
 }
-
 export default Detail;

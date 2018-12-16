@@ -18,9 +18,9 @@ class Show extends Component {
 
         return (
             <React.Fragment>
-                <div className="container">
+                <div className="container bg_xxx">
                     <div className="caMainbox d-flex">
-                        <table className="table caTable d-flex">
+                        <table className="table caTable d-flex ">
                             <thead className="col-3">
                                 <tr className="d-flex flex-column">
                                     {/* <th>編號</th> */}
@@ -50,8 +50,9 @@ class Show extends Component {
 
                         </table>
                         <div className="col-3 mt-4">
-                                <button className="btn btn-info mr-3" data-id={a[0].id} data-type="edit" onClick={this.handler}>edit</button>
-                                <button className="btn btn-danger" data-id={a[0].id} data-type="del" onClick={this.handler}>Del</button>
+                        <a className="btn btn-info mr-3" href="http://localhost:3001/MemberCenter/edit">修改資料</a>
+
+                                {/* <button className="btn btn-danger" data-id={a[0].id} data-type="del" onClick={this.handler}>Del</button> */}
                             </div>
                     </div>
                 </div>
