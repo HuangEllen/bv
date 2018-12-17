@@ -73,7 +73,6 @@ class college extends Component {
     //     this.setState({ category: id });
     //     console.log(this.state.category)
     // }
-
     render() {
         return (
             <React.Fragment>
