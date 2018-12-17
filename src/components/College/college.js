@@ -53,9 +53,9 @@ class college extends Component {
                     c_room: c_room,
                     // category: ''
                 })
-                this.getTotal()
+                
             })
-            this.getTotal()
+            // this.getTotal()
     }
     getTotal() {
         fetch('/allcategory/category_page')  //http://localhost:3000/allcategory/category_page
